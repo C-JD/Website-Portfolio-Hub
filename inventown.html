@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvenTown - Discover Inventions & Innovators</title>
+    <link rel="stylesheet" href="inventown-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">💡</span>
+                <span class="brand-text">InvenTown</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#inventors">Inventors</a></li>
+                <li><a href="#workshop">Workshop</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Discover the World of Innovation</h1>
+            <p>Explore groundbreaking inventions and the brilliant minds behind them</p>
+            <div class="innovation-showcase">
+                <div class="invention-preview">
+                    <div class="invention-icon">💡</div>
+                    <div class="invention-name">Light Bulb</div>
+                    <div class="invention-year">1879</div>
+                </div>
+                <div class="invention-preview">
+                    <div class="invention-icon">📱</div>
+                    <div class="invention-name">Smartphone</div>
+                    <div class="invention-year">2007</div>
+                </div>
+                <div class="invention-preview">
+                    <div class="invention-icon">✈️</div>
+                    <div class="invention-name">Airplane</div>
+                    <div class="invention-year">1903</div>
+                </div>
+                <div class="invention-preview">
+                    <div class="invention-icon">🌐</div>
+                    <div class="invention-name">Internet</div>
+                    <div class="invention-year">1969</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2>Innovation Timeline</h2>
+            <div class="timeline-controls">
+                <button class="era-btn active" data-era="ancient">Ancient</button>
+                <button class="era-btn" data-era="medieval">Medieval</button>
+                <button class="era-btn" data-era="industrial">Industrial</button>
+                <button class="era-btn" data-era="modern">Modern</button>
+                <button class="era-btn" data-era="digital">Digital</button>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-era active" data-era="ancient">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🔥</div>
+                        <div class="timeline-content">
+                            <h3>Fire Control</h3>
+                            <span class="timeline-date">400,000 BCE</span>
+                            <p>Early humans learned to control fire, revolutionizing cooking, warmth, and protection.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag survival">Survival</span>
+                                <span class="impact-tag society">Society</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🛞</div>
+                        <div class="timeline-content">
+                            <h3>The Wheel</h3>
+                            <span class="timeline-date">3500 BCE</span>
+                            <p>Invented in Mesopotamia, the wheel transformed transportation and machinery forever.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag transport">Transport</span>
+                                <span class="impact-tag trade">Trade</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">📜</div>
+                        <div class="timeline-content">
+                            <h3>Writing System</h3>
+                            <span class="timeline-date">3200 BCE</span>
+                            <p>Cuneiform writing in Mesopotamia enabled record-keeping and communication across time.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag communication">Communication</span>
+                                <span class="impact-tag knowledge">Knowledge</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-era" data-era="industrial">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🚂</div>
+                        <div class="timeline-content">
+                            <h3>Steam Engine</h3>
+                            <span class="timeline-date">1712</span>
+                            <p>Thomas Newcomen's steam engine powered the Industrial Revolution.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag industry">Industry</span>
+                                <span class="impact-tag transport">Transport</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">💡</div>
+                        <div class="timeline-content">
+                            <h3>Light Bulb</h3>
+                            <span class="timeline-date">1879</span>
+                            <p>Thomas Edison's practical incandescent bulb brought electric lighting to the masses.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag energy">Energy</span>
+                                <span class="impact-tag lifestyle">Lifestyle</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">📞</div>
+                        <div class="timeline-content">
+                            <h3>Telephone</h3>
+                            <span class="timeline-date">1876</span>
+                            <p>Alexander Graham Bell's telephone revolutionized long-distance communication.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag communication">Communication</span>
+                                <span class="impact-tag business">Business</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-era" data-era="modern">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">✈️</div>
+                        <div class="timeline-content">
+                            <h3>Airplane</h3>
+                            <span class="timeline-date">1903</span>
+                            <p>Wright Brothers achieved the first powered flight, opening the age of aviation.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag transport">Transport</span>
+                                <span class="impact-tag global">Global</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">💊</div>
+                        <div class="timeline-content">
+                            <h3>Penicillin</h3>
+                            <span class="timeline-date">1928</span>
+                            <p>Alexander Fleming's discovery of penicillin launched the antibiotic era.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag medicine">Medicine</span>
+                                <span class="impact-tag health">Health</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">💻</div>
+                        <div class="timeline-content">
+                            <h3>Computer</h3>
+                            <span class="timeline-date">1946</span>
+                            <p>ENIAC, the first general-purpose electronic computer, began the digital age.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag technology">Technology</span>
+                                <span class="impact-tag computation">Computation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-era" data-era="digital">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🌐</div>
+                        <div class="timeline-content">
+                            <h3>Internet</h3>
+                            <span class="timeline-date">1969</span>
+                            <p>ARPANET connected computers, evolving into the global internet we know today.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag communication">Communication</span>
+                                <span class="impact-tag information">Information</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">📱</div>
+                        <div class="timeline-content">
+                            <h3>Smartphone</h3>
+                            <span class="timeline-date">2007</span>
+                            <p>Apple's iPhone combined phone, internet, and apps in one revolutionary device.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag mobile">Mobile</span>
+                                <span class="impact-tag connectivity">Connectivity</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">🤖</div>
+                        <div class="timeline-content">
+                            <h3>Artificial Intelligence</h3>
+                            <span class="timeline-date">2010s</span>
+                            <p>Modern AI and machine learning are transforming every aspect of human life.</p>
+                            <div class="invention-impact">
+                                <span class="impact-tag automation">Automation</span>
+                                <span class="impact-tag intelligence">Intelligence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inventors" class="inventors-section">
+        <div class="container">
+            <h2>Brilliant Inventors</h2>
+            <div class="inventors-grid">
+                <div class="inventor-card">
+                    <div class="inventor-portrait">👨‍🔬</div>
+                    <div class="inventor-info">
+                        <h3>Thomas Edison</h3>
+                        <span class="inventor-era">1847-1931</span>
+                        <p class="inventor-bio">Known as the "Wizard of Menlo Park," Edison held over 1,000 patents and invented the practical light bulb, phonograph, and motion picture camera.</p>
+                        <div class="inventor-inventions">
+                            <h4>Famous Inventions:</h4>
+                            <div class="inventions-list">
+                                <span class="invention-tag">💡 Light Bulb</span>
+                                <span class="invention-tag">🎵 Phonograph</span>
+                                <span class="invention-tag">🎬 Motion Picture</span>
+                                <span class="invention-tag">⚡ Power Station</span>
+                            </div>
+                        </div>
+                        <div class="inventor-stats">
+                            <div class="stat">
+                                <span class="stat-number">1,093</span>
+                                <span class="stat-label">Patents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">14</span>
+                                <span class="stat-label">Companies Founded</span>
+                            </div>
+                        </div>
+                        <div class="inventor-quote">
+                            "Genius is one percent inspiration and ninety-nine percent perspiration."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inventor-card">
+                    <div class="inventor-portrait">👩‍🔬</div>
+                    <div class="inventor-info">
+                        <h3>Marie Curie</h3>
+                        <span class="inventor-era">1867-1934</span>
+                        <p class="inventor-bio">Pioneer in radioactivity research, first woman to win a Nobel Prize, and the only person to win Nobel Prizes in two different sciences.</p>
+                        <div class="inventor-inventions">
+                            <h4>Famous Discoveries:</h4>
+                            <div class="inventions-list">
+                                <span class="invention-tag">☢️ Radioactivity</span>
+                                <span class="invention-tag">🧪 Polonium</span>
+                                <span class="invention-tag">⚛️ Radium</span>
+                                <span class="invention-tag">🏥 Mobile X-Ray</span>
+                            </div>
+                        </div>
+                        <div class="inventor-stats">
+                            <div class="stat">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Nobel Prizes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Elements Discovered</span>
+                            </div>
+                        </div>
+                        <div class="inventor-quote">
+                            "Nothing in life is to be feared, it is only to be understood."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inventor-card">
+                    <div class="inventor-portrait">👨‍💻</div>
+                    <div class="inventor-info">
+                        <h3>Steve Jobs</h3>
+                        <span class="inventor-era">1955-2011</span>
+                        <p class="inventor-bio">Co-founder of Apple Inc., revolutionized personal computing, mobile phones, and digital entertainment with innovative design and user experience.</p>
+                        <div class="inventor-inventions">
+                            <h4>Revolutionary Products:</h4>
+                            <div class="inventions-list">
+                                <span class="invention-tag">🖥️ Personal Computer</span>
+                                <span class="invention-tag">📱 iPhone</span>
+                                <span class="invention-tag">📱 iPad</span>
+                                <span class="invention-tag">🎵 iPod</span>
+                            </div>
+                        </div>
+                        <div class="inventor-stats">
+                            <div class="stat">
+                                <span class="stat-number">346</span>
+                                <span class="stat-label">Patents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">3</span>
+                                <span class="stat-label">Companies Founded</span>
+                            </div>
+                        </div>
+                        <div class="inventor-quote">
+                            "Innovation distinguishes between a leader and a follower."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inventor-card">
+                    <div class="inventor-portrait">👨‍🚀</div>
+                    <div class="inventor-info">
+                        <h3>Nikola Tesla</h3>
+                        <span class="inventor-era">1856-1943</span>
+                        <p class="inventor-bio">Brilliant electrical engineer and inventor who developed the AC electrical system and made groundbreaking contributions to wireless technology.</p>
+                        <div class="inventor-inventions">
+                            <h4>Electrical Innovations:</h4>
+                            <div class="inventions-list">
+                                <span class="invention-tag">⚡ AC Motor</span>
+                                <span class="invention-tag">📡 Wireless Power</span>
+                                <span class="invention-tag">🔌 Tesla Coil</span>
+                                <span class="invention-tag">📻 Radio Technology</span>
+                            </div>
+                        </div>
+                        <div class="inventor-stats">
+                            <div class="stat">
+                                <span class="stat-number">300</span>
+                                <span class="stat-label">Patents</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1</span>
+                                <span class="stat-label">Unit Named After Him</span>
+                            </div>
+                        </div>
+                        <div class="inventor-quote">
+                            "The present is theirs; the future, for which I really worked, is mine."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workshop" class="workshop-section">
+        <div class="container">
+            <h2>Invention Workshop</h2>
+            <div class="workshop-interface">
+                <div class="invention-creator">
+                    <div class="creator-header">
+                        <h3>Create Your Invention</h3>
+                        <p>Design the next world-changing innovation!</p>
+                    </div>
+                    
+                    <div class="invention-form">
+                        <div class="form-group">
+                            <label>Invention Name:</label>
+                            <input type="text" class="invention-input" placeholder="Enter your invention name" value="Smart Garden Helper">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Category:</label>
+                            <select class="invention-select">
+                                <option value="technology">Technology</option>
+                                <option value="medicine">Medicine</option>
+                                <option value="transport">Transportation</option>
+                                <option value="energy">Energy</option>
+                                <option value="communication">Communication</option>
+                                <option value="lifestyle">Lifestyle</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Problem it Solves:</label>
+                            <textarea class="invention-textarea" placeholder="What problem does your invention solve?">Helps people grow healthy plants by monitoring soil moisture, sunlight, and automatically watering when needed.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>How it Works:</label>
+                            <textarea class="invention-textarea" placeholder="Explain how your invention works">Uses sensors to monitor plant health, connects to a mobile app for notifications, and has an automated watering system with a small water reservoir.</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Target Users:</label>
+                            <div class="user-options">
+                                <label class="checkbox-option">
+                                    <input type="checkbox" checked>
+                                    <span>Home Gardeners</span>
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox">
+                                    <span>Students</span>
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox" checked>
+                                    <span>Busy Professionals</span>
+                                </label>
+                                <label class="checkbox-option">
+                                    <input type="checkbox">
+                                    <span>Elderly People</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Innovation Level:</label>
+                            <div class="innovation-slider">
+                                <input type="range" min="1" max="10" value="7" class="slider">
+                                <div class="slider-labels">
+                                    <span>Improvement</span>
+                                    <span>Revolutionary</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="invention-actions">
+                        <button class="save-invention-btn">Save Invention</button>
+                        <button class="share-invention-btn">Share with Community</button>
+                        <button class="prototype-btn">Build Prototype</button>
+                    </div>
+                </div>
+                
+                <div class="invention-preview">
+                    <div class="preview-header">
+                        <h3>Invention Preview</h3>
+                    </div>
+                    
+                    <div class="invention-card-preview">
+                        <div class="preview-icon">🌱</div>
+                        <h4>Smart Garden Helper</h4>
+                        <div class="preview-category">Technology</div>
+                        <div class="preview-description">
+                            <p>Helps people grow healthy plants by monitoring soil moisture, sunlight, and automatically watering when needed.</p>
+                        </div>
+                        <div class="preview-features">
+                            <span class="feature">📱 Mobile App</span>
+                            <span class="feature">💧 Auto Watering</span>
+                            <span class="feature">📊 Plant Analytics</span>
+                        </div>
+                        <div class="preview-rating">
+                            <span class="rating-label">Innovation Score:</span>
+                            <div class="rating-stars">
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star filled">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="invention-tips">
+                        <h4>💡 Invention Tips</h4>
+                        <ul>
+                            <li>Focus on solving a real problem people face daily</li>
+                            <li>Consider how your invention could be manufactured</li>
+                            <li>Think about the environmental impact</li>
+                            <li>Research if similar solutions already exist</li>
+                            <li>Get feedback from potential users</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Student Invention Gallery</h2>
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">All Inventions</button>
+                <button class="gallery-filter" data-filter="technology">Technology</button>
+                <button class="gallery-filter" data-filter="environment">Environment</button>
+                <button class="gallery-filter" data-filter="health">Health</button>
+                <button class="gallery-filter" data-filter="education">Education</button>
+            </div>
+            
+            <div class="inventions-gallery">
+                <div class="gallery-item" data-category="technology">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🤖</div>
+                        <h4>Study Buddy AI</h4>
+                        <p class="gallery-creator">by Sarah Chen, Age 16</p>
+                        <p class="gallery-description">An AI assistant that helps students organize study schedules and provides personalized learning recommendations.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">Productivity</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 234 likes</span>
+                            <span class="stat">💬 45 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="environment">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🌊</div>
+                        <h4>Ocean Cleanup Drone</h4>
+                        <p class="gallery-creator">by Marcus Johnson, Age 17</p>
+                        <p class="gallery-description">Autonomous underwater drone that collects plastic waste and returns to charging stations powered by wave energy.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">Environment</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 189 likes</span>
+                            <span class="stat">💬 32 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="health">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">💊</div>
+                        <h4>Smart Pill Dispenser</h4>
+                        <p class="gallery-creator">by Emma Rodriguez, Age 15</p>
+                        <p class="gallery-description">Helps elderly people remember to take medications with voice reminders and automatic dispensing.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">Healthcare</span>
+                            <span class="tag">Elderly Care</span>
+                            <span class="tag">IoT</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 156 likes</span>
+                            <span class="stat">💬 28 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="technology">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">👓</div>
+                        <h4>AR Language Translator</h4>
+                        <p class="gallery-creator">by Alex Kim, Age 16</p>
+                        <p class="gallery-description">Augmented reality glasses that translate text and speech in real-time for travelers and language learners.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">AR</span>
+                            <span class="tag">Translation</span>
+                            <span class="tag">Travel</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 298 likes</span>
+                            <span class="stat">💬 67 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="education">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🧬</div>
+                        <h4>Virtual Lab Simulator</h4>
+                        <p class="gallery-creator">by Maya Patel, Age 17</p>
+                        <p class="gallery-description">VR platform that lets students conduct chemistry experiments safely in virtual laboratories.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">VR</span>
+                            <span class="tag">Science</span>
+                            <span class="tag">Safety</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 167 likes</span>
+                            <span class="stat">💬 41 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="environment">
+                    <div class="gallery-card">
+                        <div class="gallery-icon">🌱</div>
+                        <h4>Vertical Farm Tower</h4>
+                        <p class="gallery-creator">by Jordan Williams, Age 16</p>
+                        <p class="gallery-description">Compact vertical farming system for urban areas using hydroponic technology and LED grow lights.</p>
+                        <div class="gallery-tags">
+                            <span class="tag">Agriculture</span>
+                            <span class="tag">Urban</span>
+                            <span class="tag">Sustainability</span>
+                        </div>
+                        <div class="gallery-stats">
+                            <span class="stat">👍 203 likes</span>
+                            <span class="stat">💬 38 comments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="innovation-challenges">
+                <h3>Current Innovation Challenges</h3>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🌍</div>
+                        <h4>Climate Solutions</h4>
+                        <p>Design inventions that help combat climate change and reduce carbon emissions.</p>
+                        <div class="challenge-deadline">Deadline: April 30, 2025</div>
+                        <div class="challenge-prize">Prize: $5,000 + Mentorship</div>
+                        <button class="join-challenge-btn">Join Challenge</button>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🏥</div>
+                        <h4>Healthcare Innovation</h4>
+                        <p>Create solutions that make healthcare more accessible and affordable for everyone.</p>
+                        <div class="challenge-deadline">Deadline: May 15, 2025</div>
+                        <div class="challenge-prize">Prize: $3,000 + Patent Support</div>
+                        <button class="join-challenge-btn">Join Challenge</button>
+                    </div>
+                    
+                    <div class="challenge-card">
+                        <div class="challenge-icon">🎓</div>
+                        <h4>Education Revolution</h4>
+                        <p>Invent tools and technologies that transform how students learn and teachers teach.</p>
+                        <div class="challenge-deadline">Deadline: June 1, 2025</div>
+                        <div class="challenge-prize">Prize: $4,000 + Startup Incubation</div>
+                        <button class="join-challenge-btn">Join Challenge</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 InvenTown. Inspiring the next generation of innovators.</p>
+        </div>
+    </footer>
+</body>
+</html>

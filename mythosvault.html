@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythosVault - Explore World Mythology</title>
+    <link rel="stylesheet" href="mythosvault-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⚡</span>
+                <span class="brand-text">MythosVault</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#encyclopedia">Encyclopedia</a></li>
+                <li><a href="#creator">Creator</a></li>
+                <li><a href="#map">Myth Map</a></li>
+                <li><a href="#stories">Stories</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Enter the Realm of Legends</h1>
+            <p>Discover myths, legends, and folklore from every corner of the world</p>
+            <div class="mythical-showcase">
+                <div class="myth-figure greek">
+                    <div class="figure-icon">⚡</div>
+                    <div class="figure-name">Zeus</div>
+                    <div class="figure-origin">Greek</div>
+                </div>
+                <div class="myth-figure norse">
+                    <div class="figure-icon">🔨</div>
+                    <div class="figure-name">Thor</div>
+                    <div class="figure-origin">Norse</div>
+                </div>
+                <div class="myth-figure egyptian">
+                    <div class="figure-icon">🐦</div>
+                    <div class="figure-name">Horus</div>
+                    <div class="figure-origin">Egyptian</div>
+                </div>
+                <div class="myth-figure japanese">
+                    <div class="figure-icon">🐉</div>
+                    <div class="figure-name">Ryujin</div>
+                    <div class="figure-origin">Japanese</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="encyclopedia" class="encyclopedia-section">
+        <div class="container">
+            <h2>Mythology Encyclopedia</h2>
+            <div class="mythology-filters">
+                <button class="myth-filter active" data-filter="all">All Mythologies</button>
+                <button class="myth-filter" data-filter="greek">Greek</button>
+                <button class="myth-filter" data-filter="norse">Norse</button>
+                <button class="myth-filter" data-filter="egyptian">Egyptian</button>
+                <button class="myth-filter" data-filter="japanese">Japanese</button>
+                <button class="myth-filter" data-filter="celtic">Celtic</button>
+                <button class="myth-filter" data-filter="african">African</button>
+            </div>
+            
+            <div class="mythology-grid">
+                <div class="myth-card" data-category="greek">
+                    <div class="myth-header">
+                        <div class="myth-icon">⚡</div>
+                        <div class="myth-title">
+                            <h3>Zeus</h3>
+                            <span class="myth-type">King of Gods</span>
+                        </div>
+                        <div class="myth-origin">Greek</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Ruler of Mount Olympus and god of the sky and thunder. Zeus wielded lightning bolts and was known for his many adventures and relationships with mortals and immortals alike.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Sky, Thunder</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Lightning Bolt, Eagle</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Family:</span>
+                                <span class="attr-value">Son of Cronus</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">Lightning Control</span>
+                            <span class="power">Shape-shifting</span>
+                            <span class="power">Immortality</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myth-card" data-category="norse">
+                    <div class="myth-header">
+                        <div class="myth-icon">🔨</div>
+                        <div class="myth-title">
+                            <h3>Thor</h3>
+                            <span class="myth-type">God of Thunder</span>
+                        </div>
+                        <div class="myth-origin">Norse</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Son of Odin and protector of Midgard. Thor wielded the mighty hammer Mjolnir and was beloved by humans for his protection against giants and monsters.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Thunder, Strength</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Mjolnir Hammer</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Family:</span>
+                                <span class="attr-value">Son of Odin</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">Super Strength</span>
+                            <span class="power">Weather Control</span>
+                            <span class="power">Flight</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myth-card" data-category="egyptian">
+                    <div class="myth-header">
+                        <div class="myth-icon">🐦</div>
+                        <div class="myth-title">
+                            <h3>Horus</h3>
+                            <span class="myth-type">Sky God</span>
+                        </div>
+                        <div class="myth-origin">Egyptian</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Falcon-headed god of the sky and kingship. Horus was the son of Osiris and Isis, and his eye became a powerful symbol of protection and royal power.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Sky, Kingship</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Eye of Horus, Falcon</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Family:</span>
+                                <span class="attr-value">Son of Osiris & Isis</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">All-seeing Vision</span>
+                            <span class="power">Divine Protection</span>
+                            <span class="power">Royal Authority</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myth-card" data-category="japanese">
+                    <div class="myth-header">
+                        <div class="myth-icon">🐉</div>
+                        <div class="myth-title">
+                            <h3>Ryujin</h3>
+                            <span class="myth-type">Dragon King</span>
+                        </div>
+                        <div class="myth-origin">Japanese</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Dragon god of the sea who lived in an underwater palace. Ryujin controlled the tides and was said to have magical jewels that could control the ocean's movements.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Sea, Tides</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Dragon, Tide Jewels</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Realm:</span>
+                                <span class="attr-value">Underwater Palace</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">Ocean Control</span>
+                            <span class="power">Weather Magic</span>
+                            <span class="power">Shape-shifting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myth-card" data-category="celtic">
+                    <div class="myth-header">
+                        <div class="myth-icon">🌙</div>
+                        <div class="myth-title">
+                            <h3>Brigid</h3>
+                            <span class="myth-type">Triple Goddess</span>
+                        </div>
+                        <div class="myth-origin">Celtic</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Goddess of fire, poetry, and smithcraft. Brigid was revered as a patron of learning, healing, and the arts, embodying the creative and nurturing aspects of the divine feminine.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Fire, Poetry, Craft</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Flame, Cross, Well</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Aspects:</span>
+                                <span class="attr-value">Maiden, Mother, Crone</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">Sacred Fire</span>
+                            <span class="power">Inspiration</span>
+                            <span class="power">Healing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myth-card" data-category="african">
+                    <div class="myth-header">
+                        <div class="myth-icon">🕷️</div>
+                        <div class="myth-title">
+                            <h3>Anansi</h3>
+                            <span class="myth-type">Trickster Spider</span>
+                        </div>
+                        <div class="myth-origin">African</div>
+                    </div>
+                    <div class="myth-content">
+                        <p>Clever spider trickster from West African folklore. Anansi used his wit and cunning to outsmart larger, more powerful beings, often bringing wisdom and stories to humanity.</p>
+                        <div class="myth-attributes">
+                            <div class="attribute">
+                                <span class="attr-label">Domain:</span>
+                                <span class="attr-value">Wisdom, Stories</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Symbol:</span>
+                                <span class="attr-value">Spider, Web</span>
+                            </div>
+                            <div class="attribute">
+                                <span class="attr-label">Role:</span>
+                                <span class="attr-value">Keeper of Stories</span>
+                            </div>
+                        </div>
+                        <div class="myth-powers">
+                            <span class="power">Cunning Intelligence</span>
+                            <span class="power">Shape-shifting</span>
+                            <span class="power">Story Magic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="creator" class="creator-section">
+        <div class="container">
+            <h2>Mythical Character Creator</h2>
+            <div class="creator-interface">
+                <div class="character-display">
+                    <div class="character-preview">
+                        <div class="character-base">
+                            <div class="character-head">👤</div>
+                            <div class="character-body">🏛️</div>
+                            <div class="character-accessory">⚡</div>
+                        </div>
+                        <div class="character-aura"></div>
+                    </div>
+                    <div class="character-info">
+                        <input type="text" class="character-name" placeholder="Enter character name" value="Mythicus">
+                        <div class="character-stats">
+                            <div class="stat">
+                                <span class="stat-label">Power:</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Wisdom:</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Influence:</span>
+                                <div class="stat-bar">
+                                    <div class="stat-fill" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="creator-controls">
+                    <div class="control-section">
+                        <h3>Mythology Origin</h3>
+                        <div class="origin-options">
+                            <button class="origin-btn active" data-origin="greek">
+                                <span class="origin-icon">🏛️</span>
+                                <span>Greek</span>
+                            </button>
+                            <button class="origin-btn" data-origin="norse">
+                                <span class="origin-icon">❄️</span>
+                                <span>Norse</span>
+                            </button>
+                            <button class="origin-btn" data-origin="egyptian">
+                                <span class="origin-icon">🏺</span>
+                                <span>Egyptian</span>
+                            </button>
+                            <button class="origin-btn" data-origin="japanese">
+                                <span class="origin-icon">🌸</span>
+                                <span>Japanese</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h3>Character Type</h3>
+                        <div class="type-options">
+                            <button class="type-btn active" data-type="god">God/Goddess</button>
+                            <button class="type-btn" data-type="hero">Hero</button>
+                            <button class="type-btn" data-type="creature">Creature</button>
+                            <button class="type-btn" data-type="spirit">Spirit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h3>Powers & Domains</h3>
+                        <div class="powers-grid">
+                            <button class="power-btn active" data-power="lightning">⚡ Lightning</button>
+                            <button class="power-btn" data-power="fire">🔥 Fire</button>
+                            <button class="power-btn" data-power="water">🌊 Water</button>
+                            <button class="power-btn" data-power="earth">🌍 Earth</button>
+                            <button class="power-btn" data-power="wind">💨 Wind</button>
+                            <button class="power-btn" data-power="wisdom">🧠 Wisdom</button>
+                            <button class="power-btn" data-power="war">⚔️ War</button>
+                            <button class="power-btn" data-power="love">💕 Love</button>
+                        </div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h3>Appearance</h3>
+                        <div class="appearance-options">
+                            <div class="appearance-group">
+                                <label>Head:</label>
+                                <select class="appearance-select">
+                                    <option value="human">👤 Human</option>
+                                    <option value="animal">🦅 Animal</option>
+                                    <option value="divine">✨ Divine</option>
+                                </select>
+                            </div>
+                            <div class="appearance-group">
+                                <label>Body:</label>
+                                <select class="appearance-select">
+                                    <option value="robes">👘 Robes</option>
+                                    <option value="armor">🛡️ Armor</option>
+                                    <option value="natural">🌿 Natural</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="creator-actions">
+                        <button class="save-character-btn">Save Character</button>
+                        <button class="random-character-btn">Random Character</button>
+                        <button class="share-character-btn">Share Creation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2>Global Mythology Map</h2>
+            <div class="myth-map-container">
+                <div class="world-myth-map">
+                    <div class="map-region europe" data-region="europe">
+                        <div class="region-label">Europe</div>
+                        <div class="myth-marker greek" data-myth="greek" style="top: 70%; left: 60%;">
+                            <span class="marker-icon">🏛️</span>
+                            <div class="marker-tooltip">
+                                <h4>Greek Mythology</h4>
+                                <p>Gods of Olympus, heroes, and epic tales</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker norse" data-myth="norse" style="top: 20%; left: 50%;">
+                            <span class="marker-icon">❄️</span>
+                            <div class="marker-tooltip">
+                                <h4>Norse Mythology</h4>
+                                <p>Vikings, Asgard, and Ragnarok</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker celtic" data-myth="celtic" style="top: 30%; left: 20%;">
+                            <span class="marker-icon">🍀</span>
+                            <div class="marker-tooltip">
+                                <h4>Celtic Mythology</h4>
+                                <p>Druids, faeries, and ancient magic</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-region africa" data-region="africa">
+                        <div class="region-label">Africa</div>
+                        <div class="myth-marker african" data-myth="african" style="top: 40%; left: 30%;">
+                            <span class="marker-icon">🕷️</span>
+                            <div class="marker-tooltip">
+                                <h4>African Mythology</h4>
+                                <p>Anansi tales and ancestral spirits</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker egyptian" data-myth="egyptian" style="top: 20%; left: 60%;">
+                            <span class="marker-icon">🏺</span>
+                            <div class="marker-tooltip">
+                                <h4>Egyptian Mythology</h4>
+                                <p>Pharaohs, pyramids, and ancient gods</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-region asia" data-region="asia">
+                        <div class="region-label">Asia</div>
+                        <div class="myth-marker japanese" data-myth="japanese" style="top: 30%; left: 85%;">
+                            <span class="marker-icon">🌸</span>
+                            <div class="marker-tooltip">
+                                <h4>Japanese Mythology</h4>
+                                <p>Kami, yokai, and samurai legends</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker chinese" data-myth="chinese" style="top: 40%; left: 70%;">
+                            <span class="marker-icon">🐉</span>
+                            <div class="marker-tooltip">
+                                <h4>Chinese Mythology</h4>
+                                <p>Dragons, immortals, and celestial courts</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker indian" data-myth="indian" style="top: 50%; left: 60%;">
+                            <span class="marker-icon">🕉️</span>
+                            <div class="marker-tooltip">
+                                <h4>Hindu Mythology</h4>
+                                <p>Devas, avatars, and cosmic cycles</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="map-region americas" data-region="americas">
+                        <div class="region-label">Americas</div>
+                        <div class="myth-marker aztec" data-myth="aztec" style="top: 50%; left: 20%;">
+                            <span class="marker-icon">🌞</span>
+                            <div class="marker-tooltip">
+                                <h4>Aztec Mythology</h4>
+                                <p>Sun gods and feathered serpents</p>
+                            </div>
+                        </div>
+                        <div class="myth-marker native" data-myth="native" style="top: 30%; left: 25%;">
+                            <span class="marker-icon">🦅</span>
+                            <div class="marker-tooltip">
+                                <h4>Native American</h4>
+                                <p>Spirit animals and nature wisdom</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-legend">
+                    <h3>Mythology Regions</h3>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <span class="legend-icon">🏛️</span>
+                            <span class="legend-text">Greek & Roman</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">❄️</span>
+                            <span class="legend-text">Norse & Germanic</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🏺</span>
+                            <span class="legend-text">Egyptian</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🌸</span>
+                            <span class="legend-text">Japanese</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🐉</span>
+                            <span class="legend-text">Chinese</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🍀</span>
+                            <span class="legend-text">Celtic</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🕷️</span>
+                            <span class="legend-text">African</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🌞</span>
+                            <span class="legend-text">Mesoamerican</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stories" class="stories-section">
+        <div class="container">
+            <h2>Legendary Stories</h2>
+            <div class="stories-showcase">
+                <div class="featured-story">
+                    <div class="story-header">
+                        <div class="story-icon">⚡</div>
+                        <div class="story-title">
+                            <h3>The Theft of Fire</h3>
+                            <span class="story-origin">Greek Mythology</span>
+                        </div>
+                        <div class="story-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="story-content">
+                        <p>Prometheus, the clever Titan, defied Zeus by stealing fire from the gods and giving it to humanity. This act of rebellion brought both knowledge and suffering to mortals, as Zeus punished Prometheus with eternal torment.</p>
+                        <div class="story-themes">
+                            <span class="theme">Sacrifice</span>
+                            <span class="theme">Rebellion</span>
+                            <span class="theme">Knowledge</span>
+                        </div>
+                        <div class="story-characters">
+                            <div class="character">
+                                <span class="char-icon">⚡</span>
+                                <span class="char-name">Zeus</span>
+                            </div>
+                            <div class="character">
+                                <span class="char-icon">🔥</span>
+                                <span class="char-name">Prometheus</span>
+                            </div>
+                            <div class="character">
+                                <span class="char-icon">👥</span>
+                                <span class="char-name">Humanity</span>
+                            </div>
+                        </div>
+                        <button class="read-story-btn">Read Full Story</button>
+                    </div>
+                </div>
+                
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-thumbnail">🔨</div>
+                        <div class="story-info">
+                            <h4>Thor's Hammer</h4>
+                            <p class="story-summary">How Thor retrieved his stolen hammer from the giant Thrym</p>
+                            <div class="story-meta">
+                                <span class="story-culture">Norse</span>
+                                <span class="story-length">15 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-thumbnail">🐦</div>
+                        <div class="story-info">
+                            <h4>Osiris & Isis</h4>
+                            <p class="story-summary">The tale of love, death, and resurrection in ancient Egypt</p>
+                            <div class="story-meta">
+                                <span class="story-culture">Egyptian</span>
+                                <span class="story-length">20 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-thumbnail">🌸</div>
+                        <div class="story-info">
+                            <h4>Amaterasu's Cave</h4>
+                            <p class="story-summary">How the sun goddess was coaxed from her hiding place</p>
+                            <div class="story-meta">
+                                <span class="story-culture">Japanese</span>
+                                <span class="story-length">12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-thumbnail">🕷️</div>
+                        <div class="story-info">
+                            <h4>Anansi's Wisdom</h4>
+                            <p class="story-summary">How the spider trickster gathered all the world's wisdom</p>
+                            <div class="story-meta">
+                                <span class="story-culture">African</span>
+                                <span class="story-length">10 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-thumbnail">🍀</div>
+                        <div class="story-info">
+                            <h4>The Táin</h4>
+                            <p class="story-summary">Cú Chulainn's heroic defense of Ulster</p>
+                            <div class="story-meta">
+                                <span class="story-culture">Celtic</span>
+                                <span class="story-length">25 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="story-card">
+                        <div class="story-thumbnail">🐉</div>
+                        <div class="story-info">
+                            <h4>Dragon King's Palace</h4>
+                            <p class="story-summary">A fisherman's journey to the underwater realm</p>
+                            <div class="story-meta">
+                                <span class="story-culture">Chinese</span>
+                                <span class="story-length">18 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MythosVault. Preserving the world's legendary tales.</p>
+        </div>
+    </footer>
+</body>
+</html>

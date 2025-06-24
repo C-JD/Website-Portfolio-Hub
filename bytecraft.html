@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteCraft - Learn Game Development</title>
+    <link rel="stylesheet" href="bytecraft-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🎮</span>
+                <span class="brand-text">ByteCraft</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#builder">Game Builder</a></li>
+                <li><a href="#sprites">Sprites</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Create Your First Game</h1>
+            <p>Learn game development through fun, interactive projects</p>
+            <div class="game-preview">
+                <div class="game-screen">
+                    <div class="pixel-art">
+                        <div class="sprite player">🎮</div>
+                        <div class="sprite enemy">👾</div>
+                        <div class="sprite coin">💰</div>
+                        <div class="sprite power">⭐</div>
+                    </div>
+                </div>
+                <div class="game-controls">
+                    <button class="control-btn">▲</button>
+                    <div class="control-row">
+                        <button class="control-btn">◄</button>
+                        <button class="control-btn">►</button>
+                    </div>
+                    <button class="control-btn">▼</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="builder" class="builder-section">
+        <div class="container">
+            <h2>Visual Game Builder</h2>
+            <div class="builder-interface">
+                <div class="builder-sidebar">
+                    <div class="tool-section">
+                        <h3>🎨 Sprites</h3>
+                        <div class="sprite-palette">
+                            <div class="sprite-item" draggable="true" data-sprite="player">🎮</div>
+                            <div class="sprite-item" draggable="true" data-sprite="enemy">👾</div>
+                            <div class="sprite-item" draggable="true" data-sprite="coin">💰</div>
+                            <div class="sprite-item" draggable="true" data-sprite="wall">🧱</div>
+                            <div class="sprite-item" draggable="true" data-sprite="tree">🌳</div>
+                            <div class="sprite-item" draggable="true" data-sprite="water">🌊</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-section">
+                        <h3>⚙️ Actions</h3>
+                        <div class="action-blocks">
+                            <div class="action-block" draggable="true" data-action="move">
+                                <span class="block-icon">➡️</span>
+                                <span>Move</span>
+                            </div>
+                            <div class="action-block" draggable="true" data-action="jump">
+                                <span class="block-icon">⬆️</span>
+                                <span>Jump</span>
+                            </div>
+                            <div class="action-block" draggable="true" data-action="collect">
+                                <span class="block-icon">🎯</span>
+                                <span>Collect</span>
+                            </div>
+                            <div class="action-block" draggable="true" data-action="shoot">
+                                <span class="block-icon">💥</span>
+                                <span>Shoot</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-section">
+                        <h3>🎵 Sounds</h3>
+                        <div class="sound-library">
+                            <button class="sound-btn" data-sound="jump">🔊 Jump</button>
+                            <button class="sound-btn" data-sound="coin">🔊 Coin</button>
+                            <button class="sound-btn" data-sound="hit">🔊 Hit</button>
+                            <button class="sound-btn" data-sound="win">🔊 Win</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="builder-canvas">
+                    <div class="canvas-header">
+                        <h3>Game Canvas</h3>
+                        <div class="canvas-controls">
+                            <button class="canvas-btn clear-btn">🗑️ Clear</button>
+                            <button class="canvas-btn play-btn">▶️ Play</button>
+                            <button class="canvas-btn save-btn">💾 Save</button>
+                        </div>
+                    </div>
+                    <div class="game-canvas" id="gameCanvas">
+                        <div class="canvas-grid">
+                            <!-- Grid cells will be generated by JavaScript -->
+                        </div>
+                        <div class="drop-zone">
+                            <p>Drag sprites and actions here to build your game!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="builder-code">
+                    <div class="code-header">
+                        <h3>Visual Code</h3>
+                        <button class="code-toggle">👁️ Show Code</button>
+                    </div>
+                    <div class="code-blocks" id="codeBlocks">
+                        <div class="code-block start-block">
+                            <span class="block-label">🚀 Start Game</span>
+                        </div>
+                    </div>
+                    <div class="code-preview" style="display: none;">
+                        <pre><code id="generatedCode">// Your game code will appear here
+function startGame() {
+    // Game logic
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sprites" class="sprites-section">
+        <div class="container">
+            <h2>Sprite Gallery</h2>
+            <div class="sprite-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="characters">Characters</button>
+                <button class="category-btn" data-category="enemies">Enemies</button>
+                <button class="category-btn" data-category="items">Items</button>
+                <button class="category-btn" data-category="environment">Environment</button>
+            </div>
+            
+            <div class="sprites-grid">
+                <div class="sprite-card" data-category="characters">
+                    <div class="sprite-display">🎮</div>
+                    <div class="sprite-info">
+                        <h4>Player</h4>
+                        <p>Main character sprite</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 32x32</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="enemies">
+                    <div class="sprite-display">👾</div>
+                    <div class="sprite-info">
+                        <h4>Alien</h4>
+                        <p>Space invader enemy</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 32x32</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="items">
+                    <div class="sprite-display">💰</div>
+                    <div class="sprite-info">
+                        <h4>Coin</h4>
+                        <p>Collectible treasure</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 24x24</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="items">
+                    <div class="sprite-display">⭐</div>
+                    <div class="sprite-info">
+                        <h4>Power Star</h4>
+                        <p>Special power-up item</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 32x32</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="environment">
+                    <div class="sprite-display">🧱</div>
+                    <div class="sprite-info">
+                        <h4>Brick Wall</h4>
+                        <p>Solid platform block</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 32x32</span>
+                            <span class="stat">Animated: No</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="environment">
+                    <div class="sprite-display">🌳</div>
+                    <div class="sprite-info">
+                        <h4>Tree</h4>
+                        <p>Background decoration</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 48x64</span>
+                            <span class="stat">Animated: No</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="enemies">
+                    <div class="sprite-display">🐉</div>
+                    <div class="sprite-info">
+                        <h4>Dragon</h4>
+                        <p>Boss enemy sprite</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 64x64</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+                
+                <div class="sprite-card" data-category="characters">
+                    <div class="sprite-display">🤖</div>
+                    <div class="sprite-info">
+                        <h4>Robot</h4>
+                        <p>Friendly NPC character</p>
+                        <div class="sprite-stats">
+                            <span class="stat">Size: 32x32</span>
+                            <span class="stat">Animated: Yes</span>
+                        </div>
+                        <button class="use-sprite-btn">Use Sprite</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutorials" class="tutorials-section">
+        <div class="container">
+            <h2>Game Development Tutorials</h2>
+            <div class="tutorials-grid">
+                <div class="tutorial-card beginner">
+                    <div class="tutorial-badge">Beginner</div>
+                    <div class="tutorial-icon">🎯</div>
+                    <h3>Your First Game</h3>
+                    <p>Learn the basics of game development by creating a simple collect-the-coins game.</p>
+                    <div class="tutorial-stats">
+                        <span class="duration">⏱️ 15 min</span>
+                        <span class="difficulty">🟢 Easy</span>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">1. Add player sprite</div>
+                        <div class="step">2. Create movement</div>
+                        <div class="step">3. Add collectibles</div>
+                        <div class="step">4. Add scoring</div>
+                    </div>
+                    <button class="start-tutorial-btn">Start Tutorial</button>
+                </div>
+                
+                <div class="tutorial-card intermediate">
+                    <div class="tutorial-badge">Intermediate</div>
+                    <div class="tutorial-icon">👾</div>
+                    <h3>Space Shooter</h3>
+                    <p>Build a classic space shooter with enemies, bullets, and power-ups.</p>
+                    <div class="tutorial-stats">
+                        <span class="duration">⏱️ 30 min</span>
+                        <span class="difficulty">🟡 Medium</span>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">1. Player spaceship</div>
+                        <div class="step">2. Shooting mechanics</div>
+                        <div class="step">3. Enemy waves</div>
+                        <div class="step">4. Collision detection</div>
+                    </div>
+                    <button class="start-tutorial-btn">Start Tutorial</button>
+                </div>
+                
+                <div class="tutorial-card advanced">
+                    <div class="tutorial-badge">Advanced</div>
+                    <div class="tutorial-icon">🏰</div>
+                    <h3>Platform Adventure</h3>
+                    <p>Create a platformer with jumping, enemies, and multiple levels.</p>
+                    <div class="tutorial-stats">
+                        <span class="duration">⏱️ 45 min</span>
+                        <span class="difficulty">🔴 Hard</span>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">1. Physics system</div>
+                        <div class="step">2. Level design</div>
+                        <div class="step">3. Enemy AI</div>
+                        <div class="step">4. Game progression</div>
+                    </div>
+                    <button class="start-tutorial-btn">Start Tutorial</button>
+                </div>
+                
+                <div class="tutorial-card expert">
+                    <div class="tutorial-badge">Expert</div>
+                    <div class="tutorial-icon">🧩</div>
+                    <h3>Puzzle Game</h3>
+                    <p>Design a mind-bending puzzle game with unique mechanics.</p>
+                    <div class="tutorial-stats">
+                        <span class="duration">⏱️ 60 min</span>
+                        <span class="difficulty">🟣 Expert</span>
+                    </div>
+                    <div class="tutorial-steps">
+                        <div class="step">1. Game logic</div>
+                        <div class="step">2. UI design</div>
+                        <div class="step">3. Level editor</div>
+                        <div class="step">4. Save system</div>
+                    </div>
+                    <button class="start-tutorial-btn">Start Tutorial</button>
+                </div>
+            </div>
+            
+            <div class="concepts-section">
+                <h3>Game Development Concepts</h3>
+                <div class="concepts-grid">
+                    <div class="concept-card">
+                        <div class="concept-icon">🎮</div>
+                        <h4>Game Loop</h4>
+                        <p>The heart of every game - update, render, repeat</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">📐</div>
+                        <h4>Collision Detection</h4>
+                        <p>How objects interact and respond to each other</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">🎨</div>
+                        <h4>Sprite Animation</h4>
+                        <p>Bringing characters to life with movement</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">🔊</div>
+                        <h4>Audio Integration</h4>
+                        <p>Adding sound effects and music to games</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">🎯</div>
+                        <h4>Game Mechanics</h4>
+                        <p>Rules and systems that make games fun</p>
+                    </div>
+                    <div class="concept-card">
+                        <div class="concept-icon">📊</div>
+                        <h4>Game Balance</h4>
+                        <p>Making games challenging but fair</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <h2>Student Game Showcase</h2>
+            <div class="showcase-grid">
+                <div class="game-showcase">
+                    <div class="game-thumbnail">
+                        <div class="game-preview-screen">
+                            <div class="preview-sprite">🎮</div>
+                            <div class="preview-sprite">💰</div>
+                            <div class="preview-sprite">👾</div>
+                        </div>
+                        <div class="play-overlay">
+                            <button class="play-btn">▶️ Play</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Treasure Hunter</h3>
+                        <p class="game-creator">by Alex Chen</p>
+                        <p class="game-description">Collect coins while avoiding enemies in this classic arcade-style game.</p>
+                        <div class="game-stats">
+                            <span class="stat">⭐ 4.8/5</span>
+                            <span class="stat">🎮 1.2k plays</span>
+                            <span class="stat">❤️ 89 likes</span>
+                        </div>
+                        <div class="game-tags">
+                            <span class="tag">Arcade</span>
+                            <span class="tag">Beginner</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-showcase">
+                    <div class="game-thumbnail">
+                        <div class="game-preview-screen">
+                            <div class="preview-sprite">🚀</div>
+                            <div class="preview-sprite">👾</div>
+                            <div class="preview-sprite">💥</div>
+                        </div>
+                        <div class="play-overlay">
+                            <button class="play-btn">▶️ Play</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Galaxy Defender</h3>
+                        <p class="game-creator">by Maya Patel</p>
+                        <p class="game-description">Defend Earth from alien invasion in this intense space shooter.</p>
+                        <div class="game-stats">
+                            <span class="stat">⭐ 4.9/5</span>
+                            <span class="stat">🎮 2.1k plays</span>
+                            <span class="stat">❤️ 156 likes</span>
+                        </div>
+                        <div class="game-tags">
+                            <span class="tag">Shooter</span>
+                            <span class="tag">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-showcase">
+                    <div class="game-thumbnail">
+                        <div class="game-preview-screen">
+                            <div class="preview-sprite">🤖</div>
+                            <div class="preview-sprite">🧱</div>
+                            <div class="preview-sprite">⭐</div>
+                        </div>
+                        <div class="play-overlay">
+                            <button class="play-btn">▶️ Play</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Robot Adventure</h3>
+                        <p class="game-creator">by Jordan Kim</p>
+                        <p class="game-description">Help the robot navigate through challenging platform levels.</p>
+                        <div class="game-stats">
+                            <span class="stat">⭐ 4.7/5</span>
+                            <span class="stat">🎮 890 plays</span>
+                            <span class="stat">❤️ 67 likes</span>
+                        </div>
+                        <div class="game-tags">
+                            <span class="tag">Platformer</span>
+                            <span class="tag">Advanced</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-showcase">
+                    <div class="game-thumbnail">
+                        <div class="game-preview-screen">
+                            <div class="preview-sprite">🧩</div>
+                            <div class="preview-sprite">🔢</div>
+                            <div class="preview-sprite">✨</div>
+                        </div>
+                        <div class="play-overlay">
+                            <button class="play-btn">▶️ Play</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Number Puzzle</h3>
+                        <p class="game-creator">by Sam Rodriguez</p>
+                        <p class="game-description">Solve mathematical puzzles to unlock the next level.</p>
+                        <div class="game-stats">
+                            <span class="stat">⭐ 4.6/5</span>
+                            <span class="stat">🎮 654 plays</span>
+                            <span class="stat">❤️ 43 likes</span>
+                        </div>
+                        <div class="game-tags">
+                            <span class="tag">Puzzle</span>
+                            <span class="tag">Educational</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-board">
+                <h3>Top Creators This Month</h3>
+                <div class="creators-list">
+                    <div class="creator-item">
+                        <div class="creator-rank">🏆</div>
+                        <div class="creator-info">
+                            <span class="creator-name">Maya Patel</span>
+                            <span class="creator-games">5 games published</span>
+                        </div>
+                        <div class="creator-score">2,450 pts</div>
+                    </div>
+                    <div class="creator-item">
+                        <div class="creator-rank">🥈</div>
+                        <div class="creator-info">
+                            <span class="creator-name">Alex Chen</span>
+                            <span class="creator-games">3 games published</span>
+                        </div>
+                        <div class="creator-score">1,890 pts</div>
+                    </div>
+                    <div class="creator-item">
+                        <div class="creator-rank">🥉</div>
+                        <div class="creator-info">
+                            <span class="creator-name">Jordan Kim</span>
+                            <span class="creator-games">4 games published</span>
+                        </div>
+                        <div class="creator-score">1,650 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ByteCraft. Empowering the next generation of game developers.</p>
+        </div>
+    </footer>
+</body>
+</html>

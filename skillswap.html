@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap - Peer Learning Platform</title>
+    <link rel="stylesheet" href="skillswap-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🤝</span>
+                <span class="brand-text">SkillSwap</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#exchange">Exchange</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Learn Together, Grow Together</h1>
+            <p>Connect with peers to share skills and discover new talents</p>
+            <div class="skill-exchange-demo">
+                <div class="skill-giver">
+                    <div class="profile-avatar">👨‍🎨</div>
+                    <div class="skill-offer">🎨 Digital Art</div>
+                </div>
+                <div class="exchange-arrow">⇄</div>
+                <div class="skill-receiver">
+                    <div class="profile-avatar">👩‍💻</div>
+                    <div class="skill-want">💻 Web Design</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="profiles" class="profiles-section">
+        <div class="container">
+            <h2>Community Profiles</h2>
+            <div class="profile-filters">
+                <button class="filter-btn active" data-filter="all">All Members</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="music">Music</button>
+            </div>
+            
+            <div class="profiles-grid">
+                <div class="profile-card" data-category="creative">
+                    <div class="profile-header">
+                        <div class="profile-avatar large">👨‍🎨</div>
+                        <div class="profile-info">
+                            <h3>Alex Chen</h3>
+                            <p class="profile-title">Digital Artist</p>
+                            <div class="profile-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        </div>
+                        <div class="profile-status online">Online</div>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        <h4>Can Teach:</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">🎨 Digital Art</span>
+                            <span class="skill-tag intermediate">📱 UI Design</span>
+                            <span class="skill-tag beginner">🖼️ Photography</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-wants">
+                        <h4>Wants to Learn:</h4>
+                        <div class="wants-list">
+                            <span class="want-tag">💻 Web Development</span>
+                            <span class="want-tag">🎵 Music Production</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">23</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Skills Learned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">156</span>
+                            <span class="stat-label">Skill Points</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="connect-btn">Connect</button>
+                        <button class="message-btn">Message</button>
+                    </div>
+                </div>
+
+                <div class="profile-card" data-category="tech">
+                    <div class="profile-header">
+                        <div class="profile-avatar large">👩‍💻</div>
+                        <div class="profile-info">
+                            <h3>Maya Patel</h3>
+                            <p class="profile-title">Full-Stack Developer</p>
+                            <div class="profile-rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        </div>
+                        <div class="profile-status away">Away</div>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        <h4>Can Teach:</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">💻 JavaScript</span>
+                            <span class="skill-tag expert">⚛️ React</span>
+                            <span class="skill-tag intermediate">🐍 Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-wants">
+                        <h4>Wants to Learn:</h4>
+                        <div class="wants-list">
+                            <span class="want-tag">🎨 Graphic Design</span>
+                            <span class="want-tag">📊 Data Science</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">31</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Skills Learned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">203</span>
+                            <span class="stat-label">Skill Points</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="connect-btn">Connect</button>
+                        <button class="message-btn">Message</button>
+                    </div>
+                </div>
+
+                <div class="profile-card" data-category="music">
+                    <div class="profile-header">
+                        <div class="profile-avatar large">👨‍🎤</div>
+                        <div class="profile-info">
+                            <h3>Jordan Kim</h3>
+                            <p class="profile-title">Music Producer</p>
+                            <div class="profile-rating">⭐⭐⭐⭐ (4.6)</div>
+                        </div>
+                        <div class="profile-status online">Online</div>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        <h4>Can Teach:</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">🎵 Music Production</span>
+                            <span class="skill-tag intermediate">🎸 Guitar</span>
+                            <span class="skill-tag beginner">🎹 Piano</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-wants">
+                        <h4>Wants to Learn:</h4>
+                        <div class="wants-list">
+                            <span class="want-tag">🎬 Video Editing</span>
+                            <span class="want-tag">📱 App Development</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">18</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Skills Learned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">142</span>
+                            <span class="stat-label">Skill Points</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="connect-btn">Connect</button>
+                        <button class="message-btn">Message</button>
+                    </div>
+                </div>
+
+                <div class="profile-card" data-category="academic">
+                    <div class="profile-header">
+                        <div class="profile-avatar large">👩‍🔬</div>
+                        <div class="profile-info">
+                            <h3>Emma Rodriguez</h3>
+                            <p class="profile-title">Science Tutor</p>
+                            <div class="profile-rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        </div>
+                        <div class="profile-status offline">Offline</div>
+                    </div>
+                    
+                    <div class="profile-skills">
+                        <h4>Can Teach:</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">🧪 Chemistry</span>
+                            <span class="skill-tag expert">🔬 Biology</span>
+                            <span class="skill-tag intermediate">📐 Mathematics</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-wants">
+                        <h4>Wants to Learn:</h4>
+                        <div class="wants-list">
+                            <span class="want-tag">🗣️ Public Speaking</span>
+                            <span class="want-tag">📸 Photography</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">27</span>
+                            <span class="stat-label">Students Taught</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">Skills Learned</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">189</span>
+                            <span class="stat-label">Skill Points</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-actions">
+                        <button class="connect-btn">Connect</button>
+                        <button class="message-btn">Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>Skill Marketplace</h2>
+            <div class="skills-categories">
+                <button class="category-btn active" data-category="all">All Skills</button>
+                <button class="category-btn" data-category="creative">🎨 Creative</button>
+                <button class="category-btn" data-category="tech">💻 Technology</button>
+                <button class="category-btn" data-category="academic">📚 Academic</button>
+                <button class="category-btn" data-category="sports">⚽ Sports</button>
+                <button class="category-btn" data-category="music">🎵 Music</button>
+                <button class="category-btn" data-category="language">🗣️ Languages</button>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-category="creative">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎨</div>
+                        <div class="skill-info">
+                            <h3>Digital Art</h3>
+                            <p class="skill-description">Learn digital painting, illustration, and design fundamentals</p>
+                        </div>
+                        <div class="skill-level expert">Expert</div>
+                    </div>
+                    
+                    <div class="skill-details">
+                        <div class="skill-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-text">12 Teachers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎓</span>
+                                <span class="stat-text">89 Students</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⏱️</span>
+                                <span class="stat-text">2-4 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-topics">
+                            <span class="topic">Photoshop</span>
+                            <span class="topic">Illustration</span>
+                            <span class="topic">Color Theory</span>
+                            <span class="topic">Digital Painting</span>
+                        </div>
+                        
+                        <div class="skill-actions">
+                            <button class="learn-btn">Want to Learn</button>
+                            <button class="teach-btn">Can Teach</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="tech">
+                    <div class="skill-header">
+                        <div class="skill-icon">💻</div>
+                        <div class="skill-info">
+                            <h3>Web Development</h3>
+                            <p class="skill-description">Build modern websites and web applications from scratch</p>
+                        </div>
+                        <div class="skill-level intermediate">Intermediate</div>
+                    </div>
+                    
+                    <div class="skill-details">
+                        <div class="skill-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-text">8 Teachers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎓</span>
+                                <span class="stat-text">156 Students</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⏱️</span>
+                                <span class="stat-text">6-8 weeks</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-topics">
+                            <span class="topic">HTML/CSS</span>
+                            <span class="topic">JavaScript</span>
+                            <span class="topic">React</span>
+                            <span class="topic">Node.js</span>
+                        </div>
+                        
+                        <div class="skill-actions">
+                            <button class="learn-btn">Want to Learn</button>
+                            <button class="teach-btn">Can Teach</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="music">
+                    <div class="skill-header">
+                        <div class="skill-icon">🎸</div>
+                        <div class="skill-info">
+                            <h3>Guitar Playing</h3>
+                            <p class="skill-description">Master acoustic and electric guitar techniques</p>
+                        </div>
+                        <div class="skill-level beginner">Beginner</div>
+                    </div>
+                    
+                    <div class="skill-details">
+                        <div class="skill-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-text">15 Teachers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎓</span>
+                                <span class="stat-text">203 Students</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⏱️</span>
+                                <span class="stat-text">3-6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-topics">
+                            <span class="topic">Chords</span>
+                            <span class="topic">Strumming</span>
+                            <span class="topic">Fingerpicking</span>
+                            <span class="topic">Music Theory</span>
+                        </div>
+                        
+                        <div class="skill-actions">
+                            <button class="learn-btn">Want to Learn</button>
+                            <button class="teach-btn">Can Teach</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-category="language">
+                    <div class="skill-header">
+                        <div class="skill-icon">🗣️</div>
+                        <div class="skill-info">
+                            <h3>Spanish Language</h3>
+                            <p class="skill-description">Learn conversational Spanish and grammar fundamentals</p>
+                        </div>
+                        <div class="skill-level intermediate">Intermediate</div>
+                    </div>
+                    
+                    <div class="skill-details">
+                        <div class="skill-stats">
+                            <div class="stat">
+                                <span class="stat-icon">👥</span>
+                                <span class="stat-text">6 Teachers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">🎓</span>
+                                <span class="stat-text">78 Students</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-icon">⏱️</span>
+                                <span class="stat-text">4-6 months</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-topics">
+                            <span class="topic">Conversation</span>
+                            <span class="topic">Grammar</span>
+                            <span class="topic">Vocabulary</span>
+                            <span class="topic">Culture</span>
+                        </div>
+                        
+                        <div class="skill-actions">
+                            <button class="learn-btn">Want to Learn</button>
+                            <button class="teach-btn">Can Teach</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exchange" class="exchange-section">
+        <div class="container">
+            <h2>Active Skill Exchanges</h2>
+            <div class="exchange-board">
+                <div class="exchange-item">
+                    <div class="exchange-participants">
+                        <div class="participant giver">
+                            <div class="participant-avatar">👨‍🎨</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Alex Chen</span>
+                                <span class="participant-skill">Teaching: Digital Art</span>
+                            </div>
+                        </div>
+                        <div class="exchange-arrow">⇄</div>
+                        <div class="participant receiver">
+                            <div class="participant-avatar">👩‍💻</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Maya Patel</span>
+                                <span class="participant-skill">Teaching: Web Development</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-details">
+                        <div class="exchange-progress">
+                            <span class="progress-label">Progress:</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                            <span class="progress-text">Week 3 of 4</span>
+                        </div>
+                        
+                        <div class="exchange-schedule">
+                            <span class="schedule-icon">📅</span>
+                            <span class="schedule-text">Next session: Tomorrow 3:00 PM</span>
+                        </div>
+                        
+                        <div class="exchange-rating">
+                            <span class="rating-label">Mutual Rating:</span>
+                            <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-actions">
+                        <button class="view-exchange-btn">View Details</button>
+                        <button class="message-exchange-btn">Message</button>
+                    </div>
+                </div>
+
+                <div class="exchange-item">
+                    <div class="exchange-participants">
+                        <div class="participant giver">
+                            <div class="participant-avatar">👨‍🎤</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Jordan Kim</span>
+                                <span class="participant-skill">Teaching: Music Production</span>
+                            </div>
+                        </div>
+                        <div class="exchange-arrow">⇄</div>
+                        <div class="participant receiver">
+                            <div class="participant-avatar">👩‍🔬</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Emma Rodriguez</span>
+                                <span class="participant-skill">Teaching: Chemistry</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-details">
+                        <div class="exchange-progress">
+                            <span class="progress-label">Progress:</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <span class="progress-text">Week 1 of 6</span>
+                        </div>
+                        
+                        <div class="exchange-schedule">
+                            <span class="schedule-icon">📅</span>
+                            <span class="schedule-text">Next session: Friday 7:00 PM</span>
+                        </div>
+                        
+                        <div class="exchange-rating">
+                            <span class="rating-label">Mutual Rating:</span>
+                            <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-actions">
+                        <button class="view-exchange-btn">View Details</button>
+                        <button class="message-exchange-btn">Message</button>
+                    </div>
+                </div>
+
+                <div class="exchange-item completed">
+                    <div class="exchange-participants">
+                        <div class="participant giver">
+                            <div class="participant-avatar">👩‍🎨</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Sarah Wilson</span>
+                                <span class="participant-skill">Taught: Photography</span>
+                            </div>
+                        </div>
+                        <div class="exchange-arrow">⇄</div>
+                        <div class="participant receiver">
+                            <div class="participant-avatar">👨‍💼</div>
+                            <div class="participant-info">
+                                <span class="participant-name">Mike Johnson</span>
+                                <span class="participant-skill">Taught: Public Speaking</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-details">
+                        <div class="exchange-completion">
+                            <span class="completion-icon">✅</span>
+                            <span class="completion-text">Exchange Completed Successfully!</span>
+                        </div>
+                        
+                        <div class="exchange-rating">
+                            <span class="rating-label">Final Rating:</span>
+                            <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                        </div>
+                        
+                        <div class="exchange-badges">
+                            <span class="badge">🏆 Excellent Teacher</span>
+                            <span class="badge">🎯 Goal Achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="exchange-actions">
+                        <button class="review-exchange-btn">Write Review</button>
+                        <button class="repeat-exchange-btn">Exchange Again</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2>Community Hub</h2>
+            <div class="community-tabs">
+                <button class="tab-btn active" data-tab="feed">Activity Feed</button>
+                <button class="tab-btn" data-tab="tips">Learning Tips</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+                <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
+            </div>
+            
+            <div class="tab-content active" data-tab="feed">
+                <div class="activity-feed">
+                    <div class="activity-item">
+                        <div class="activity-avatar">👨‍🎨</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-user">Alex Chen</span>
+                                <span class="activity-action">completed a skill exchange</span>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                            <div class="activity-details">
+                                Successfully taught Digital Art to Maya Patel and learned Web Development! 🎉
+                            </div>
+                            <div class="activity-badges">
+                                <span class="achievement-badge">🏆 Master Teacher</span>
+                                <span class="achievement-badge">🎯 Quick Learner</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">👩‍💻</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-user">Maya Patel</span>
+                                <span class="activity-action">shared a learning tip</span>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                            <div class="activity-details">
+                                "Practice coding for 30 minutes daily instead of long weekend sessions. Consistency beats intensity!" 💡
+                            </div>
+                            <div class="activity-reactions">
+                                <button class="reaction-btn">👍 12</button>
+                                <button class="reaction-btn">💡 8</button>
+                                <button class="reaction-btn">🔥 5</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-avatar">👨‍🎤</div>
+                        <div class="activity-content">
+                            <div class="activity-header">
+                                <span class="activity-user">Jordan Kim</span>
+                                <span class="activity-action">started learning</span>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                            <div class="activity-details">
+                                Just started my video editing journey with Emma! Excited to create amazing content 🎬
+                            </div>
+                            <div class="activity-reactions">
+                                <button class="reaction-btn">👍 18</button>
+                                <button class="reaction-btn">🎉 6</button>
+                                <button class="reaction-btn">🚀 3</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="tips">
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon">🎯</div>
+                            <h4>Set Clear Goals</h4>
+                        </div>
+                        <p>Define specific, measurable objectives for each skill exchange to track your progress effectively.</p>
+                        <div class="tip-author">
+                            <span class="author-avatar">👩‍🏫</span>
+                            <span class="author-name">Dr. Sarah Mitchell</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon">⏰</div>
+                            <h4>Practice Regularly</h4>
+                        </div>
+                        <p>Consistent daily practice, even for just 15-30 minutes, is more effective than sporadic long sessions.</p>
+                        <div class="tip-author">
+                            <span class="author-avatar">👨‍💻</span>
+                            <span class="author-name">Alex Thompson</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon">🤝</div>
+                            <h4>Give Feedback</h4>
+                        </div>
+                        <p>Provide constructive feedback to your learning partner. Teaching others reinforces your own knowledge.</p>
+                        <div class="tip-author">
+                            <span class="author-avatar">👩‍🎨</span>
+                            <span class="author-name">Maria Garcia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-header">
+                            <div class="tip-icon">📝</div>
+                            <h4>Document Progress</h4>
+                        </div>
+                        <p>Keep a learning journal to track your progress, challenges, and breakthroughs throughout your journey.</p>
+                        <div class="tip-author">
+                            <span class="author-avatar">👨‍🔬</span>
+                            <span class="author-name">Dr. James Lee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="achievements">
+                <div class="achievements-showcase">
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">🏆</div>
+                        <h4>Master Teacher</h4>
+                        <p>Successfully taught 10 different students</p>
+                        <div class="achievement-progress">Earned: March 15, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">🎯</div>
+                        <h4>Quick Learner</h4>
+                        <p>Completed 5 skill exchanges in record time</p>
+                        <div class="achievement-progress">Earned: March 10, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">🤝</div>
+                        <h4>Community Helper</h4>
+                        <p>Helped 25 community members with advice</p>
+                        <div class="achievement-progress">Earned: March 8, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🌟</div>
+                        <h4>Skill Master</h4>
+                        <p>Reach expert level in 3 different skills</p>
+                        <div class="achievement-progress">Progress: 2/3</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">👑</div>
+                        <h4>Community Leader</h4>
+                        <p>Reach top 10 on the leaderboard</p>
+                        <div class="achievement-progress">Current rank: #12</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🔥</div>
+                        <h4>Streak Master</h4>
+                        <p>Maintain a 30-day learning streak</p>
+                        <div class="achievement-progress">Current streak: 18 days</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="leaderboard">
+                <div class="leaderboard">
+                    <div class="leaderboard-item rank-1">
+                        <div class="rank-badge">🏆</div>
+                        <div class="leader-avatar">👩‍💻</div>
+                        <div class="leader-info">
+                            <span class="leader-name">Maya Patel</span>
+                            <span class="leader-stats">245 Skill Points • 31 Students Taught</span>
+                        </div>
+                        <div class="leader-score">245 pts</div>
+                    </div>
+                    
+                    <div class="leaderboard-item rank-2">
+                        <div class="rank-badge">🥈</div>
+                        <div class="leader-avatar">👩‍🔬</div>
+                        <div class="leader-info">
+                            <span class="leader-name">Emma Rodriguez</span>
+                            <span class="leader-stats">203 Skill Points • 27 Students Taught</span>
+                        </div>
+                        <div class="leader-score">203 pts</div>
+                    </div>
+                    
+                    <div class="leaderboard-item rank-3">
+                        <div class="rank-badge">🥉</div>
+                        <div class="leader-avatar">👨‍🎨</div>
+                        <div class="leader-info">
+                            <span class="leader-name">Alex Chen</span>
+                            <span class="leader-stats">189 Skill Points • 23 Students Taught</span>
+                        </div>
+                        <div class="leader-score">189 pts</div>
+                    </div>
+                    
+                    <div class="leaderboard-item">
+                        <div class="rank-badge">4</div>
+                        <div class="leader-avatar">👨‍🎤</div>
+                        <div class="leader-info">
+                            <span class="leader-name">Jordan Kim</span>
+                            <span class="leader-stats">156 Skill Points • 18 Students Taught</span>
+                        </div>
+                        <div class="leader-score">156 pts</div>
+                    </div>
+                    
+                    <div class="leaderboard-item your-rank">
+                        <div class="rank-badge">12</div>
+                        <div class="leader-avatar">👤</div>
+                        <div class="leader-info">
+                            <span class="leader-name">You</span>
+                            <span class="leader-stats">89 Skill Points • 8 Students Taught</span>
+                        </div>
+                        <div class="leader-score">89 pts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SkillSwap. Connecting learners and teachers worldwide.</p>
+        </div>
+    </footer>
+</body>
+</html>

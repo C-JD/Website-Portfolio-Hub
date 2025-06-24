@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Portal - Journey Through History</title>
+    <link rel="stylesheet" href="timeportal-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⏰</span>
+                <span class="brand-text">Time Portal</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#eras">Eras</a></li>
+                <li><a href="#artifacts">Artifacts</a></li>
+                <li><a href="#avatar">Avatar</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Journey Through Time</h1>
+            <p>Explore history's greatest moments and civilizations</p>
+            <div class="time-machine">
+                <div class="portal-ring outer"></div>
+                <div class="portal-ring middle"></div>
+                <div class="portal-ring inner"></div>
+                <div class="portal-center">
+                    <span class="portal-text">Enter Portal</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2>Historical Timeline</h2>
+            <div class="timeline-nav">
+                <button class="era-btn active" data-era="prehistoric">Prehistoric</button>
+                <button class="era-btn" data-era="ancient">Ancient</button>
+                <button class="era-btn" data-era="medieval">Medieval</button>
+                <button class="era-btn" data-era="renaissance">Renaissance</button>
+                <button class="era-btn" data-era="industrial">Industrial</button>
+                <button class="era-btn" data-era="modern">Modern</button>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-era active" data-era="prehistoric">
+                    <div class="timeline-event" data-year="3000000">
+                        <div class="event-marker">🦕</div>
+                        <div class="event-content">
+                            <h3>Stone Age Begins</h3>
+                            <span class="event-date">3 Million BCE</span>
+                            <p>Early humans develop first stone tools</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-year="10000">
+                        <div class="event-marker">🌾</div>
+                        <div class="event-content">
+                            <h3>Agricultural Revolution</h3>
+                            <span class="event-date">10,000 BCE</span>
+                            <p>Humans begin farming and domesticating animals</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-era" data-era="ancient">
+                    <div class="timeline-event" data-year="3100">
+                        <div class="event-marker">🏺</div>
+                        <div class="event-content">
+                            <h3>Ancient Egypt</h3>
+                            <span class="event-date">3100 BCE</span>
+                            <p>First Egyptian dynasty established</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-year="776">
+                        <div class="event-marker">🏛️</div>
+                        <div class="event-content">
+                            <h3>First Olympics</h3>
+                            <span class="event-date">776 BCE</span>
+                            <p>Ancient Olympic Games begin in Greece</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-era" data-era="medieval">
+                    <div class="timeline-event" data-year="476">
+                        <div class="event-marker">⚔️</div>
+                        <div class="event-content">
+                            <h3>Fall of Rome</h3>
+                            <span class="event-date">476 CE</span>
+                            <p>Western Roman Empire collapses</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event" data-year="1066">
+                        <div class="event-marker">🏰</div>
+                        <div class="event-content">
+                            <h3>Norman Conquest</h3>
+                            <span class="event-date">1066 CE</span>
+                            <p>Battle of Hastings changes English history</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="eras" class="eras-section">
+        <div class="container">
+            <h2>Explore Historical Eras</h2>
+            <div class="eras-grid">
+                <div class="era-card ancient-egypt">
+                    <div class="era-background"></div>
+                    <div class="era-content">
+                        <div class="era-icon">🏺</div>
+                        <h3>Ancient Egypt</h3>
+                        <p>Discover the land of pharaohs, pyramids, and hieroglyphs</p>
+                        <div class="era-facts">
+                            <span class="fact">🔺 Built Great Pyramid</span>
+                            <span class="fact">📜 Invented papyrus</span>
+                            <span class="fact">⚱️ Mummification masters</span>
+                        </div>
+                        <button class="explore-btn">Enter Egypt</button>
+                    </div>
+                </div>
+
+                <div class="era-card medieval">
+                    <div class="era-background"></div>
+                    <div class="era-content">
+                        <div class="era-icon">🏰</div>
+                        <h3>Medieval Times</h3>
+                        <p>Knights, castles, and the age of chivalry</p>
+                        <div class="era-facts">
+                            <span class="fact">⚔️ Knights & armor</span>
+                            <span class="fact">🏰 Castle fortresses</span>
+                            <span class="fact">📚 Illuminated manuscripts</span>
+                        </div>
+                        <button class="explore-btn">Enter Medieval</button>
+                    </div>
+                </div>
+
+                <div class="era-card renaissance">
+                    <div class="era-background"></div>
+                    <div class="era-content">
+                        <div class="era-icon">🎨</div>
+                        <h3>Renaissance</h3>
+                        <p>Art, science, and cultural rebirth</p>
+                        <div class="era-facts">
+                            <span class="fact">🎨 Da Vinci's masterpieces</span>
+                            <span class="fact">🔭 Scientific revolution</span>
+                            <span class="fact">📖 Printing press</span>
+                        </div>
+                        <button class="explore-btn">Enter Renaissance</button>
+                    </div>
+                </div>
+
+                <div class="era-card industrial">
+                    <div class="era-background"></div>
+                    <div class="era-content">
+                        <div class="era-icon">⚙️</div>
+                        <h3>Industrial Age</h3>
+                        <p>Steam engines and the birth of modern industry</p>
+                        <div class="era-facts">
+                            <span class="fact">🚂 Steam locomotives</span>
+                            <span class="fact">🏭 Factory system</span>
+                            <span class="fact">💡 Electric lighting</span>
+                        </div>
+                        <button class="explore-btn">Enter Industrial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artifacts" class="artifacts-section">
+        <div class="container">
+            <h2>Historical Artifacts</h2>
+            <div class="artifacts-museum">
+                <div class="artifact-display">
+                    <div class="artifact-item active">
+                        <div class="artifact-image">🗿</div>
+                        <div class="artifact-info">
+                            <h3>Rosetta Stone</h3>
+                            <span class="artifact-era">Ancient Egypt - 196 BCE</span>
+                            <p>The key to deciphering Egyptian hieroglyphs, discovered in 1799. This granodiorite stele contains the same text in three scripts: hieroglyphic, demotic, and ancient Greek.</p>
+                            <div class="artifact-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Material:</span>
+                                    <span class="stat-value">Granodiorite</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Location:</span>
+                                    <span class="stat-value">British Museum</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Significance:</span>
+                                    <span class="stat-value">Deciphered hieroglyphs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="artifact-gallery">
+                    <div class="gallery-item active" data-artifact="rosetta">
+                        <div class="gallery-icon">🗿</div>
+                        <span>Rosetta Stone</span>
+                    </div>
+                    <div class="gallery-item" data-artifact="crown">
+                        <div class="gallery-icon">👑</div>
+                        <span>Crown Jewels</span>
+                    </div>
+                    <div class="gallery-item" data-artifact="scroll">
+                        <div class="gallery-icon">📜</div>
+                        <span>Dead Sea Scrolls</span>
+                    </div>
+                    <div class="gallery-item" data-artifact="mask">
+                        <div class="gallery-icon">🎭</div>
+                        <span>Tutankhamun's Mask</span>
+                    </div>
+                    <div class="gallery-item" data-artifact="sword">
+                        <div class="gallery-icon">⚔️</div>
+                        <span>Excalibur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="avatar" class="avatar-section">
+        <div class="container">
+            <h2>Historical Avatar Creator</h2>
+            <div class="avatar-creator">
+                <div class="avatar-display">
+                    <div class="avatar-character">
+                        <div class="character-base">👤</div>
+                        <div class="character-outfit egyptian active">
+                            <div class="outfit-head">👑</div>
+                            <div class="outfit-body">🏺</div>
+                        </div>
+                    </div>
+                    <div class="avatar-name">
+                        <input type="text" placeholder="Enter your historical name" class="name-input">
+                    </div>
+                </div>
+                
+                <div class="avatar-customization">
+                    <div class="customization-section">
+                        <h3>Choose Your Era</h3>
+                        <div class="era-options">
+                            <button class="era-option active" data-outfit="egyptian">
+                                <span class="option-icon">🏺</span>
+                                <span>Egyptian Pharaoh</span>
+                            </button>
+                            <button class="era-option" data-outfit="knight">
+                                <span class="option-icon">⚔️</span>
+                                <span>Medieval Knight</span>
+                            </button>
+                            <button class="era-option" data-outfit="renaissance">
+                                <span class="option-icon">🎨</span>
+                                <span>Renaissance Noble</span>
+                            </button>
+                            <button class="era-option" data-outfit="viking">
+                                <span class="option-icon">🛡️</span>
+                                <span>Viking Warrior</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="customization-section">
+                        <h3>Accessories</h3>
+                        <div class="accessory-options">
+                            <button class="accessory-btn" data-accessory="crown">👑 Crown</button>
+                            <button class="accessory-btn" data-accessory="sword">⚔️ Sword</button>
+                            <button class="accessory-btn" data-accessory="shield">🛡️ Shield</button>
+                            <button class="accessory-btn" data-accessory="scroll">📜 Scroll</button>
+                        </div>
+                    </div>
+                    
+                    <div class="avatar-actions">
+                        <button class="save-avatar-btn">Save Avatar</button>
+                        <button class="random-avatar-btn">Random Avatar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="historical-facts">
+                <h3>Did You Know?</h3>
+                <div class="facts-carousel">
+                    <div class="fact-card active">
+                        <div class="fact-icon">🏺</div>
+                        <p>Ancient Egyptians were among the first to use makeup, believing it had magical protective powers.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">⚔️</div>
+                        <p>Medieval knights' armor could weigh up to 60 pounds, but was so well-balanced they could still mount horses!</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🎨</div>
+                        <p>Leonardo da Vinci wrote his notes in mirror script, from right to left, possibly to keep his ideas secret.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Time Portal. Journey through history responsibly.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,816 @@
+/* Time Portal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #faf7f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 20px rgba(230, 126, 34, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e67e22;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e67e22;
+}
+
+.back-btn {
+    padding: 8px 16px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #d35400;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 48px;
+    opacity: 0.9;
+}
+
+.time-machine {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.portal-ring {
+    position: absolute;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.portal-ring.outer {
+    width: 200px;
+    height: 200px;
+    animation: rotate 20s linear infinite;
+}
+
+.portal-ring.middle {
+    width: 150px;
+    height: 150px;
+    animation: rotate 15s linear infinite reverse;
+}
+
+.portal-ring.inner {
+    width: 100px;
+    height: 100px;
+    animation: rotate 10s linear infinite;
+}
+
+.portal-center {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.portal-center:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.portal-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.timeline-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e67e22;
+}
+
+.timeline-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.era-btn {
+    padding: 12px 24px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.era-btn:hover,
+.era-btn.active {
+    background: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e67e22;
+    transform: translateX(-50%);
+}
+
+.timeline-era {
+    display: none;
+}
+
+.timeline-era.active {
+    display: block;
+}
+
+.timeline-event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    position: relative;
+}
+
+.timeline-event:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.event-marker {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 4px solid #e67e22;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 2;
+    margin: 0 24px;
+}
+
+.event-content {
+    background: #faf7f0;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #e67e22;
+    flex: 1;
+    max-width: 300px;
+}
+
+.timeline-event:nth-child(even) .event-content {
+    border-left: none;
+    border-right: 4px solid #e67e22;
+}
+
+.event-content h3 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.event-date {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.event-content p {
+    color: #666;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* Eras Section */
+.eras-section {
+    padding: 80px 0;
+    background: #faf7f0;
+}
+
+.eras-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e67e22;
+}
+
+.eras-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.era-card {
+    position: relative;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    min-height: 400px;
+}
+
+.era-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.era-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    opacity: 0.1;
+}
+
+.era-content {
+    position: relative;
+    padding: 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.era-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.era-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.era-card p {
+    color: #666;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.era-facts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex: 1;
+}
+
+.fact {
+    background: #faf7f0;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border-left: 3px solid #e67e22;
+}
+
+.explore-btn {
+    padding: 12px 24px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.explore-btn:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+}
+
+/* Artifacts Section */
+.artifacts-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.artifacts-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e67e22;
+}
+
+.artifacts-museum {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 48px;
+}
+
+.artifact-display {
+    background: #faf7f0;
+    border-radius: 16px;
+    padding: 32px;
+    border: 2px solid #e9ecef;
+}
+
+.artifact-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.artifact-image {
+    font-size: 6rem;
+    text-align: center;
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.artifact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.artifact-era {
+    color: #e67e22;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.artifact-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.artifact-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.stat-value {
+    color: #666;
+}
+
+.artifact-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.gallery-item:hover,
+.gallery-item.active {
+    background: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+
+.gallery-icon {
+    font-size: 1.5rem;
+}
+
+/* Avatar Section */
+.avatar-section {
+    padding: 80px 0;
+    background: #faf7f0;
+}
+
+.avatar-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e67e22;
+}
+
+.avatar-creator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 64px;
+}
+
+.avatar-display {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-character {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.character-base {
+    font-size: 8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.character-outfit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.character-outfit.active {
+    display: block;
+}
+
+.outfit-head {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+
+.outfit-body {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+}
+
+.name-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.name-input:focus {
+    border-color: #e67e22;
+}
+
+.avatar-customization {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.customization-section {
+    margin-bottom: 32px;
+}
+
+.customization-section h3 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+}
+
+.era-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.era-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.era-option:hover,
+.era-option.active {
+    background: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+
+.accessory-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.accessory-btn {
+    padding: 8px 16px;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.accessory-btn:hover,
+.accessory-btn.active {
+    background: #e67e22;
+    color: white;
+    border-color: #e67e22;
+}
+
+.avatar-actions {
+    display: flex;
+    gap: 16px;
+}
+
+.save-avatar-btn,
+.random-avatar-btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.save-avatar-btn {
+    background: #e67e22;
+    color: white;
+}
+
+.save-avatar-btn:hover {
+    background: #d35400;
+}
+
+.random-avatar-btn {
+    background: #f8f9fa;
+    color: #2c3e50;
+    border: 2px solid #e9ecef;
+}
+
+.random-avatar-btn:hover {
+    background: #e9ecef;
+}
+
+.historical-facts h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+    color: #2c3e50;
+}
+
+.facts-carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.fact-card {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.fact-card.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fact-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.fact-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 32px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .portal-ring.outer {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .portal-ring.middle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .portal-ring.inner {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .portal-center {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .timeline-nav {
+        gap: 8px;
+    }
+    
+    .era-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .timeline-event {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    
+    .event-marker {
+        margin: 0 0 16px 0;
+    }
+    
+    .event-content {
+        max-width: 100%;
+        border-left: 4px solid #e67e22 !important;
+        border-right: none !important;
+    }
+    
+    .eras-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .artifacts-museum {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .artifact-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .avatar-creator {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .era-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .avatar-actions {
+        flex-direction: column;
+    }
+}

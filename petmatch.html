@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMatch - Virtual Pet Adoption</title>
+    <link rel="stylesheet" href="petmatch-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🐾</span>
+                <span class="brand-text">PetMatch</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#adoption">Adoption</a></li>
+                <li><a href="#care">Pet Care</a></li>
+                <li><a href="#quiz">Personality Quiz</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Find Your Perfect Pet Companion</h1>
+            <p>Adopt, care for, and learn responsibility with virtual pets</p>
+            <div class="pet-carousel">
+                <div class="pet-preview">
+                    <div class="pet-avatar">🐶</div>
+                    <div class="pet-name">Buddy</div>
+                    <div class="pet-mood happy">😊</div>
+                </div>
+                <div class="pet-preview">
+                    <div class="pet-avatar">🐱</div>
+                    <div class="pet-name">Whiskers</div>
+                    <div class="pet-mood content">😌</div>
+                </div>
+                <div class="pet-preview">
+                    <div class="pet-avatar">🐰</div>
+                    <div class="pet-name">Fluffy</div>
+                    <div class="pet-mood playful">😄</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="adoption" class="adoption-section">
+        <div class="container">
+            <h2>Pet Adoption Center</h2>
+            <div class="adoption-filters">
+                <button class="filter-btn active" data-filter="all">All Pets</button>
+                <button class="filter-btn" data-filter="dogs">Dogs</button>
+                <button class="filter-btn" data-filter="cats">Cats</button>
+                <button class="filter-btn" data-filter="rabbits">Rabbits</button>
+                <button class="filter-btn" data-filter="birds">Birds</button>
+            </div>
+            
+            <div class="pets-grid">
+                <div class="pet-card" data-category="dogs">
+                    <div class="pet-image">🐶</div>
+                    <div class="pet-info">
+                        <h3>Buddy</h3>
+                        <div class="pet-details">
+                            <span class="age">2 years old</span>
+                            <span class="breed">Golden Retriever</span>
+                        </div>
+                        <div class="personality-traits">
+                            <span class="trait friendly">Friendly</span>
+                            <span class="trait energetic">Energetic</span>
+                            <span class="trait loyal">Loyal</span>
+                        </div>
+                        <p class="pet-description">Buddy loves playing fetch and going on long walks. He's great with kids and other pets!</p>
+                        <div class="care-requirements">
+                            <div class="requirement">
+                                <span class="req-icon">🍖</span>
+                                <span class="req-level">High</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🎾</span>
+                                <span class="req-level">High</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🧼</span>
+                                <span class="req-level">Medium</span>
+                            </div>
+                        </div>
+                        <button class="adopt-btn">Adopt Buddy</button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-category="cats">
+                    <div class="pet-image">🐱</div>
+                    <div class="pet-info">
+                        <h3>Whiskers</h3>
+                        <div class="pet-details">
+                            <span class="age">1 year old</span>
+                            <span class="breed">Persian Cat</span>
+                        </div>
+                        <div class="personality-traits">
+                            <span class="trait calm">Calm</span>
+                            <span class="trait independent">Independent</span>
+                            <span class="trait affectionate">Affectionate</span>
+                        </div>
+                        <p class="pet-description">Whiskers is a gentle soul who loves cozy naps and gentle pets. Perfect for quiet homes.</p>
+                        <div class="care-requirements">
+                            <div class="requirement">
+                                <span class="req-icon">🍖</span>
+                                <span class="req-level">Medium</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🎾</span>
+                                <span class="req-level">Low</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🧼</span>
+                                <span class="req-level">High</span>
+                            </div>
+                        </div>
+                        <button class="adopt-btn">Adopt Whiskers</button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-category="rabbits">
+                    <div class="pet-image">🐰</div>
+                    <div class="pet-info">
+                        <h3>Fluffy</h3>
+                        <div class="pet-details">
+                            <span class="age">6 months old</span>
+                            <span class="breed">Holland Lop</span>
+                        </div>
+                        <div class="personality-traits">
+                            <span class="trait playful">Playful</span>
+                            <span class="trait curious">Curious</span>
+                            <span class="trait gentle">Gentle</span>
+                        </div>
+                        <p class="pet-description">Fluffy loves hopping around and exploring. She's very social and enjoys gentle handling.</p>
+                        <div class="care-requirements">
+                            <div class="requirement">
+                                <span class="req-icon">🍖</span>
+                                <span class="req-level">Medium</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🎾</span>
+                                <span class="req-level">Medium</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🧼</span>
+                                <span class="req-level">Low</span>
+                            </div>
+                        </div>
+                        <button class="adopt-btn">Adopt Fluffy</button>
+                    </div>
+                </div>
+
+                <div class="pet-card" data-category="birds">
+                    <div class="pet-image">🦜</div>
+                    <div class="pet-info">
+                        <h3>Sunny</h3>
+                        <div class="pet-details">
+                            <span class="age">3 years old</span>
+                            <span class="breed">Cockatiel</span>
+                        </div>
+                        <div class="personality-traits">
+                            <span class="trait social">Social</span>
+                            <span class="trait intelligent">Intelligent</span>
+                            <span class="trait vocal">Vocal</span>
+                        </div>
+                        <p class="pet-description">Sunny loves to sing and can learn simple words. She's very social and loves interaction.</p>
+                        <div class="care-requirements">
+                            <div class="requirement">
+                                <span class="req-icon">🍖</span>
+                                <span class="req-level">Low</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🎾</span>
+                                <span class="req-level">High</span>
+                            </div>
+                            <div class="requirement">
+                                <span class="req-icon">🧼</span>
+                                <span class="req-level">Medium</span>
+                            </div>
+                        </div>
+                        <button class="adopt-btn">Adopt Sunny</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="care" class="care-section">
+        <div class="container">
+            <h2>Pet Care Dashboard</h2>
+            <div class="care-interface">
+                <div class="pet-status">
+                    <div class="current-pet">
+                        <div class="pet-avatar-large">🐶</div>
+                        <div class="pet-info-large">
+                            <h3>Buddy</h3>
+                            <p>Your loyal companion</p>
+                            <div class="pet-level">
+                                <span class="level-label">Level 5</span>
+                                <div class="level-bar">
+                                    <div class="level-progress" style="width: 60%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="status-bars">
+                        <div class="status-item">
+                            <div class="status-header">
+                                <span class="status-icon">❤️</span>
+                                <span class="status-label">Health</span>
+                                <span class="status-value">85%</span>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status-fill health" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-header">
+                                <span class="status-icon">😊</span>
+                                <span class="status-label">Happiness</span>
+                                <span class="status-value">92%</span>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status-fill happiness" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-header">
+                                <span class="status-icon">⚡</span>
+                                <span class="status-label">Energy</span>
+                                <span class="status-value">67%</span>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status-fill energy" style="width: 67%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="status-item">
+                            <div class="status-header">
+                                <span class="status-icon">🍖</span>
+                                <span class="status-label">Hunger</span>
+                                <span class="status-value">40%</span>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status-fill hunger" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="care-actions">
+                    <h3>Care Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn feed">
+                            <span class="action-icon">🍖</span>
+                            <span class="action-label">Feed</span>
+                            <span class="action-effect">+20 Hunger</span>
+                        </button>
+                        
+                        <button class="action-btn play">
+                            <span class="action-icon">🎾</span>
+                            <span class="action-label">Play</span>
+                            <span class="action-effect">+15 Happiness</span>
+                        </button>
+                        
+                        <button class="action-btn groom">
+                            <span class="action-icon">🧼</span>
+                            <span class="action-label">Groom</span>
+                            <span class="action-effect">+10 Health</span>
+                        </button>
+                        
+                        <button class="action-btn sleep">
+                            <span class="action-icon">💤</span>
+                            <span class="action-label">Sleep</span>
+                            <span class="action-effect">+25 Energy</span>
+                        </button>
+                        
+                        <button class="action-btn train">
+                            <span class="action-icon">🎯</span>
+                            <span class="action-label">Train</span>
+                            <span class="action-effect">+XP</span>
+                        </button>
+                        
+                        <button class="action-btn vet">
+                            <span class="action-icon">🏥</span>
+                            <span class="action-label">Vet Visit</span>
+                            <span class="action-effect">+30 Health</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="care-schedule">
+                    <h3>Daily Schedule</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item completed">
+                            <div class="schedule-time">8:00 AM</div>
+                            <div class="schedule-task">
+                                <span class="task-icon">🍖</span>
+                                <span class="task-name">Morning Feed</span>
+                            </div>
+                            <div class="schedule-status">✅</div>
+                        </div>
+                        
+                        <div class="schedule-item completed">
+                            <div class="schedule-time">10:00 AM</div>
+                            <div class="schedule-task">
+                                <span class="task-icon">🚶</span>
+                                <span class="task-name">Morning Walk</span>
+                            </div>
+                            <div class="schedule-status">✅</div>
+                        </div>
+                        
+                        <div class="schedule-item pending">
+                            <div class="schedule-time">2:00 PM</div>
+                            <div class="schedule-task">
+                                <span class="task-icon">🎾</span>
+                                <span class="task-name">Playtime</span>
+                            </div>
+                            <div class="schedule-status">⏰</div>
+                        </div>
+                        
+                        <div class="schedule-item pending">
+                            <div class="schedule-time">6:00 PM</div>
+                            <div class="schedule-task">
+                                <span class="task-icon">🍖</span>
+                                <span class="task-name">Evening Feed</span>
+                            </div>
+                            <div class="schedule-status">⏰</div>
+                        </div>
+                        
+                        <div class="schedule-item pending">
+                            <div class="schedule-time">8:00 PM</div>
+                            <div class="schedule-task">
+                                <span class="task-icon">🧼</span>
+                                <span class="task-name">Grooming</span>
+                            </div>
+                            <div class="schedule-status">⏰</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2>Pet Personality Quiz</h2>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%"></div>
+                    </div>
+                    <span class="progress-text">Question 1 of 5</span>
+                </div>
+                
+                <div class="quiz-card">
+                    <div class="question-icon">🏠</div>
+                    <h3 class="question-text">What's your ideal living situation?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="apartment">
+                            <span class="option-icon">🏢</span>
+                            <span class="option-text">Small apartment</span>
+                        </button>
+                        <button class="quiz-option" data-value="house">
+                            <span class="option-icon">🏠</span>
+                            <span class="option-text">House with yard</span>
+                        </button>
+                        <button class="quiz-option" data-value="farm">
+                            <span class="option-icon">🌾</span>
+                            <span class="option-text">Farm or large property</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="quiz-results" style="display: none;">
+                    <div class="result-pet">
+                        <div class="result-avatar">🐱</div>
+                        <h3>Your Perfect Match: Cat!</h3>
+                        <p>Based on your answers, a cat would be the perfect companion for you. Cats are independent, loving, and perfect for your lifestyle.</p>
+                        <div class="match-reasons">
+                            <div class="reason">
+                                <span class="reason-icon">🏠</span>
+                                <span>Great for apartment living</span>
+                            </div>
+                            <div class="reason">
+                                <span class="reason-icon">⏰</span>
+                                <span>Low maintenance schedule</span>
+                            </div>
+                            <div class="reason">
+                                <span class="reason-icon">💝</span>
+                                <span>Affectionate but independent</span>
+                            </div>
+                        </div>
+                        <button class="find-pet-btn">Find Your Cat</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community-section">
+        <div class="container">
+            <h2>Pet Community</h2>
+            <div class="community-tabs">
+                <button class="tab-btn active" data-tab="feed">Community Feed</button>
+                <button class="tab-btn" data-tab="tips">Care Tips</button>
+                <button class="tab-btn" data-tab="achievements">Achievements</button>
+            </div>
+            
+            <div class="tab-content active" data-tab="feed">
+                <div class="community-feed">
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar">👤</div>
+                            <div class="user-info">
+                                <span class="username">Sarah_PetLover</span>
+                                <span class="post-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>My virtual cat Mittens just learned a new trick! 🐱✨</p>
+                            <div class="post-image">
+                                <div class="pet-showcase">🐱</div>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn like">❤️ 24</button>
+                            <button class="action-btn comment">💬 8</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar">👤</div>
+                            <div class="user-info">
+                                <span class="username">Mike_DogTrainer</span>
+                                <span class="post-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Pro tip: Consistency is key when training your virtual pets! 🎯</p>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn like">❤️ 18</button>
+                            <button class="action-btn comment">💬 12</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+                    
+                    <div class="post-card">
+                        <div class="post-header">
+                            <div class="user-avatar">👤</div>
+                            <div class="user-info">
+                                <span class="username">Emma_BirdWatcher</span>
+                                <span class="post-time">1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>My cockatiel Sunny just reached level 10! So proud! 🦜🎉</p>
+                            <div class="achievement-badge">
+                                <span class="badge-icon">🏆</span>
+                                <span class="badge-text">Level 10 Achieved!</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <button class="action-btn like">❤️ 31</button>
+                            <button class="action-btn comment">💬 15</button>
+                            <button class="action-btn share">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="tips">
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">🍖</div>
+                        <h4>Feeding Schedule</h4>
+                        <p>Feed your pets at regular intervals to maintain their health and happiness levels.</p>
+                        <div class="tip-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">🎾</div>
+                        <h4>Playtime Benefits</h4>
+                        <p>Regular play sessions boost happiness and help your pet learn new skills faster.</p>
+                        <div class="tip-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">🧼</div>
+                        <h4>Grooming Importance</h4>
+                        <p>Keep your pets clean and healthy with regular grooming sessions.</p>
+                        <div class="tip-rating">⭐⭐⭐⭐</div>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">💤</div>
+                        <h4>Rest Time</h4>
+                        <p>Ensure your pets get enough sleep to restore their energy levels.</p>
+                        <div class="tip-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" data-tab="achievements">
+                <div class="achievements-grid">
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">🏠</div>
+                        <h4>First Adoption</h4>
+                        <p>Adopted your first virtual pet</p>
+                        <div class="achievement-date">Earned: March 1, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">❤️</div>
+                        <h4>Caring Owner</h4>
+                        <p>Maintained 90%+ happiness for 7 days</p>
+                        <div class="achievement-date">Earned: March 8, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card earned">
+                        <div class="achievement-icon">🎯</div>
+                        <h4>Trainer</h4>
+                        <p>Successfully trained your pet 10 times</p>
+                        <div class="achievement-date">Earned: March 12, 2025</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🏆</div>
+                        <h4>Pet Master</h4>
+                        <p>Reach level 20 with any pet</p>
+                        <div class="achievement-progress">Progress: 5/20</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">🌟</div>
+                        <h4>Collection Expert</h4>
+                        <p>Adopt 5 different types of pets</p>
+                        <div class="achievement-progress">Progress: 1/5</div>
+                    </div>
+                    
+                    <div class="achievement-card locked">
+                        <div class="achievement-icon">👥</div>
+                        <h4>Community Helper</h4>
+                        <p>Help 50 community members</p>
+                        <div class="achievement-progress">Progress: 12/50</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 PetMatch. Teaching responsibility through virtual pet care.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldExplorer - Discover Global Cultures</title>
+    <link rel="stylesheet" href="worldexplorer-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🌍</span>
+                <span class="brand-text">WorldExplorer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#map">World Map</a></li>
+                <li><a href="#languages">Languages</a></li>
+                <li><a href="#cultures">Cultures</a></li>
+                <li><a href="#trivia">Trivia</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Explore the World</h1>
+            <p>Discover amazing cultures, languages, and traditions from every continent</p>
+            <div class="globe-animation">
+                <div class="globe">🌍</div>
+                <div class="orbit-countries">
+                    <span class="country">🇺🇸</span>
+                    <span class="country">🇯🇵</span>
+                    <span class="country">🇧🇷</span>
+                    <span class="country">🇮🇳</span>
+                    <span class="country">🇫🇷</span>
+                    <span class="country">🇪🇬</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="map" class="map-section">
+        <div class="container">
+            <h2>Interactive World Map</h2>
+            <div class="map-container">
+                <div class="world-map">
+                    <div class="continent" data-continent="north-america">
+                        <div class="continent-label">North America</div>
+                        <div class="country-pin" data-country="usa" style="top: 30%; left: 25%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>United States</h4>
+                                <p>Capital: Washington D.C.</p>
+                                <p>Population: 331M</p>
+                                <p>Language: English</p>
+                            </div>
+                        </div>
+                        <div class="country-pin" data-country="canada" style="top: 20%; left: 30%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Canada</h4>
+                                <p>Capital: Ottawa</p>
+                                <p>Population: 38M</p>
+                                <p>Languages: English, French</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="continent" data-continent="south-america">
+                        <div class="continent-label">South America</div>
+                        <div class="country-pin" data-country="brazil" style="top: 55%; left: 40%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Brazil</h4>
+                                <p>Capital: Brasília</p>
+                                <p>Population: 215M</p>
+                                <p>Language: Portuguese</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="continent" data-continent="europe">
+                        <div class="continent-label">Europe</div>
+                        <div class="country-pin" data-country="france" style="top: 25%; left: 55%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>France</h4>
+                                <p>Capital: Paris</p>
+                                <p>Population: 68M</p>
+                                <p>Language: French</p>
+                            </div>
+                        </div>
+                        <div class="country-pin" data-country="germany" style="top: 20%; left: 58%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Germany</h4>
+                                <p>Capital: Berlin</p>
+                                <p>Population: 83M</p>
+                                <p>Language: German</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="continent" data-continent="asia">
+                        <div class="continent-label">Asia</div>
+                        <div class="country-pin" data-country="china" style="top: 25%; left: 75%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>China</h4>
+                                <p>Capital: Beijing</p>
+                                <p>Population: 1.4B</p>
+                                <p>Language: Mandarin</p>
+                            </div>
+                        </div>
+                        <div class="country-pin" data-country="japan" style="top: 30%; left: 85%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Japan</h4>
+                                <p>Capital: Tokyo</p>
+                                <p>Population: 125M</p>
+                                <p>Language: Japanese</p>
+                            </div>
+                        </div>
+                        <div class="country-pin" data-country="india" style="top: 40%; left: 70%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>India</h4>
+                                <p>Capital: New Delhi</p>
+                                <p>Population: 1.4B</p>
+                                <p>Languages: Hindi, English</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="continent" data-continent="africa">
+                        <div class="continent-label">Africa</div>
+                        <div class="country-pin" data-country="egypt" style="top: 35%; left: 60%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Egypt</h4>
+                                <p>Capital: Cairo</p>
+                                <p>Population: 104M</p>
+                                <p>Language: Arabic</p>
+                            </div>
+                        </div>
+                        <div class="country-pin" data-country="south-africa" style="top: 65%; left: 62%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>South Africa</h4>
+                                <p>Capital: Cape Town</p>
+                                <p>Population: 60M</p>
+                                <p>Languages: 11 official</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="continent" data-continent="oceania">
+                        <div class="continent-label">Oceania</div>
+                        <div class="country-pin" data-country="australia" style="top: 70%; left: 80%;">
+                            <span class="pin">📍</span>
+                            <div class="country-tooltip">
+                                <h4>Australia</h4>
+                                <p>Capital: Canberra</p>
+                                <p>Population: 26M</p>
+                                <p>Language: English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="continent-filter">
+                    <h3>Explore by Continent</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="north-america">North America</button>
+                        <button class="filter-btn" data-filter="south-america">South America</button>
+                        <button class="filter-btn" data-filter="europe">Europe</button>
+                        <button class="filter-btn" data-filter="asia">Asia</button>
+                        <button class="filter-btn" data-filter="africa">Africa</button>
+                        <button class="filter-btn" data-filter="oceania">Oceania</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="languages-section">
+        <div class="container">
+            <h2>Language Learning Hub</h2>
+            <div class="languages-grid">
+                <div class="language-card">
+                    <div class="language-flag">🇪🇸</div>
+                    <h3>Spanish</h3>
+                    <div class="language-stats">
+                        <span>500M speakers</span>
+                        <span>21 countries</span>
+                    </div>
+                    <div class="phrase-section">
+                        <h4>Learn a phrase:</h4>
+                        <div class="phrase">
+                            <span class="phrase-text">¡Hola! ¿Cómo estás?</span>
+                            <span class="phrase-translation">Hello! How are you?</span>
+                            <button class="play-audio">🔊</button>
+                        </div>
+                    </div>
+                    <div class="cultural-fact">
+                        <h4>Cultural Fact:</h4>
+                        <p>Spanish is the official language in 21 countries and is the 2nd most spoken language worldwide.</p>
+                    </div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-flag">🇯🇵</div>
+                    <h3>Japanese</h3>
+                    <div class="language-stats">
+                        <span>125M speakers</span>
+                        <span>3 writing systems</span>
+                    </div>
+                    <div class="phrase-section">
+                        <h4>Learn a phrase:</h4>
+                        <div class="phrase">
+                            <span class="phrase-text">こんにちは (Konnichiwa)</span>
+                            <span class="phrase-translation">Hello / Good afternoon</span>
+                            <button class="play-audio">🔊</button>
+                        </div>
+                    </div>
+                    <div class="cultural-fact">
+                        <h4>Cultural Fact:</h4>
+                        <p>Japanese uses three writing systems: Hiragana, Katakana, and Kanji characters.</p>
+                    </div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-flag">🇫🇷</div>
+                    <h3>French</h3>
+                    <div class="language-stats">
+                        <span>280M speakers</span>
+                        <span>29 countries</span>
+                    </div>
+                    <div class="phrase-section">
+                        <h4>Learn a phrase:</h4>
+                        <div class="phrase">
+                            <span class="phrase-text">Bonjour! Comment allez-vous?</span>
+                            <span class="phrase-translation">Hello! How are you?</span>
+                            <button class="play-audio">🔊</button>
+                        </div>
+                    </div>
+                    <div class="cultural-fact">
+                        <h4>Cultural Fact:</h4>
+                        <p>French is an official language in 29 countries and is spoken on every continent.</p>
+                    </div>
+                </div>
+
+                <div class="language-card">
+                    <div class="language-flag">🇨🇳</div>
+                    <h3>Mandarin</h3>
+                    <div class="language-stats">
+                        <span>918M speakers</span>
+                        <span>Tonal language</span>
+                    </div>
+                    <div class="phrase-section">
+                        <h4>Learn a phrase:</h4>
+                        <div class="phrase">
+                            <span class="phrase-text">你好 (Nǐ hǎo)</span>
+                            <span class="phrase-translation">Hello</span>
+                            <button class="play-audio">🔊</button>
+                        </div>
+                    </div>
+                    <div class="cultural-fact">
+                        <h4>Cultural Fact:</h4>
+                        <p>Mandarin is a tonal language with 4 main tones that change the meaning of words.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cultures" class="cultures-section">
+        <div class="container">
+            <h2>Cultural Celebrations</h2>
+            <div class="celebrations-timeline">
+                <div class="celebration-item">
+                    <div class="celebration-date">March</div>
+                    <div class="celebration-content">
+                        <h3>🌸 Holi Festival (India)</h3>
+                        <p>The Festival of Colors celebrates the arrival of spring and the victory of good over evil.</p>
+                        <div class="celebration-details">
+                            <span class="detail">🎨 Colors represent joy and love</span>
+                            <span class="detail">💃 Traditional dances and music</span>
+                            <span class="detail">🍬 Special sweets and treats</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celebration-item">
+                    <div class="celebration-date">May</div>
+                    <div class="celebration-content">
+                        <h3>🎌 Children's Day (Japan)</h3>
+                        <p>Kodomo no Hi celebrates children's happiness and honors their personalities.</p>
+                        <div class="celebration-details">
+                            <span class="detail">🎏 Koinobori carp streamers</span>
+                            <span class="detail">⚔️ Samurai armor displays</span>
+                            <span class="detail">🍃 Kashiwa mochi treats</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celebration-item">
+                    <div class="celebration-date">September</div>
+                    <div class="celebration-content">
+                        <h3>🌙 Mid-Autumn Festival (China)</h3>
+                        <p>A harvest festival celebrating family reunion and the full moon.</p>
+                        <div class="celebration-details">
+                            <span class="detail">🥮 Mooncakes sharing</span>
+                            <span class="detail">🏮 Lantern displays</span>
+                            <span class="detail">👨‍👩‍👧‍👦 Family gatherings</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="celebration-item">
+                    <div class="celebration-date">November</div>
+                    <div class="celebration-content">
+                        <h3>💀 Día de los Muertos (Mexico)</h3>
+                        <p>Day of the Dead honors deceased loved ones with vibrant celebrations.</p>
+                        <div class="celebration-details">
+                            <span class="detail">🌺 Marigold decorations</span>
+                            <span class="detail">🍞 Pan de muerto bread</span>
+                            <span class="detail">🕯️ Altar offerings</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="traditions-showcase">
+                <h3>Traditional Arts & Crafts</h3>
+                <div class="traditions-grid">
+                    <div class="tradition-card">
+                        <div class="tradition-image">🏺</div>
+                        <h4>Pottery (Greece)</h4>
+                        <p>Ancient Greek pottery techniques dating back thousands of years, featuring geometric and mythological designs.</p>
+                    </div>
+                    <div class="tradition-card">
+                        <div class="tradition-image">🎭</div>
+                        <h4>Masks (Africa)</h4>
+                        <p>Traditional African masks used in ceremonies, representing spirits, ancestors, and cultural stories.</p>
+                    </div>
+                    <div class="tradition-card">
+                        <div class="tradition-image">🧶</div>
+                        <h4>Textiles (Peru)</h4>
+                        <p>Andean weaving traditions using alpaca wool and natural dyes, passed down through generations.</p>
+                    </div>
+                    <div class="tradition-card">
+                        <div class="tradition-image">🎨</div>
+                        <h4>Calligraphy (China)</h4>
+                        <p>The art of beautiful writing, considered one of the highest forms of Chinese artistic expression.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="trivia" class="trivia-section">
+        <div class="container">
+            <h2>World Trivia Challenge</h2>
+            <div class="trivia-game">
+                <div class="trivia-header">
+                    <div class="score">Score: <span id="score">0</span></div>
+                    <div class="question-counter">Question <span id="current">1</span> of <span id="total">5</span></div>
+                </div>
+                
+                <div class="trivia-card">
+                    <div class="question-category">Geography</div>
+                    <h3 class="question-text">Which country has the most time zones?</h3>
+                    <div class="answer-options">
+                        <button class="answer-btn" data-answer="a">A) Russia</button>
+                        <button class="answer-btn" data-answer="b">B) United States</button>
+                        <button class="answer-btn" data-answer="c">C) China</button>
+                        <button class="answer-btn" data-answer="d">D) France</button>
+                    </div>
+                    <div class="question-explanation" style="display: none;">
+                        <p><strong>Correct Answer: D) France</strong></p>
+                        <p>France has 12 time zones due to its overseas territories, more than any other country!</p>
+                    </div>
+                </div>
+                
+                <div class="trivia-controls">
+                    <button class="next-question-btn" style="display: none;">Next Question</button>
+                    <button class="restart-btn" style="display: none;">Restart Quiz</button>
+                </div>
+            </div>
+            
+            <div class="trivia-stats">
+                <h3>Interesting World Facts</h3>
+                <div class="facts-grid">
+                    <div class="fact-item">
+                        <div class="fact-icon">🗻</div>
+                        <div class="fact-content">
+                            <h4>Highest Peak</h4>
+                            <p>Mount Everest stands at 29,032 feet (8,849 meters) above sea level</p>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🌊</div>
+                        <div class="fact-content">
+                            <h4>Deepest Point</h4>
+                            <p>Mariana Trench is 36,200 feet (11,034 meters) below sea level</p>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🌍</div>
+                        <div class="fact-content">
+                            <h4>Countries</h4>
+                            <p>There are 195 countries recognized by the United Nations</p>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🗣️</div>
+                        <div class="fact-content">
+                            <h4>Languages</h4>
+                            <p>Over 7,000 languages are spoken worldwide today</p>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🏜️</div>
+                        <div class="fact-content">
+                            <h4>Largest Desert</h4>
+                            <p>Antarctica is technically the world's largest desert</p>
+                        </div>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon">🌲</div>
+                        <div class="fact-content">
+                            <h4>Amazon Rainforest</h4>
+                            <p>Produces 20% of the world's oxygen and spans 9 countries</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 WorldExplorer. Connecting cultures across the globe.</p>
+        </div>
+    </footer>
+</body>
+</html>

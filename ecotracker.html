@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTracker - Track Your Environmental Impact</title>
+    <link rel="stylesheet" href="ecotracker-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🌱</span>
+                <span class="brand-text">EcoTracker</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#calculator">Calculator</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#tips">Eco Tips</a></li>
+                <li><a href="#badges">Badges</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Track Your Carbon Footprint</h1>
+            <p>Make a difference, one step at a time</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">2.4k</span>
+                    <span class="stat-label">Active Users</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15.2</span>
+                    <span class="stat-label">Tons CO₂ Saved</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">89%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>Carbon Footprint Calculator</h2>
+            <div class="calculator-grid">
+                <div class="calc-category">
+                    <h3>🚗 Transportation</h3>
+                    <div class="input-group">
+                        <label>Daily commute (km)</label>
+                        <input type="range" min="0" max="100" value="20" class="slider">
+                        <span class="value">20 km</span>
+                    </div>
+                    <div class="impact">Impact: 4.2 kg CO₂/day</div>
+                </div>
+
+                <div class="calc-category">
+                    <h3>🏠 Energy Use</h3>
+                    <div class="input-group">
+                        <label>Monthly electricity (kWh)</label>
+                        <input type="range" min="0" max="1000" value="300" class="slider">
+                        <span class="value">300 kWh</span>
+                    </div>
+                    <div class="impact">Impact: 126 kg CO₂/month</div>
+                </div>
+
+                <div class="calc-category">
+                    <h3>🍽️ Diet</h3>
+                    <div class="diet-options">
+                        <label class="diet-option">
+                            <input type="radio" name="diet" value="meat">
+                            <span>Meat-heavy</span>
+                        </label>
+                        <label class="diet-option selected">
+                            <input type="radio" name="diet" value="balanced" checked>
+                            <span>Balanced</span>
+                        </label>
+                        <label class="diet-option">
+                            <input type="radio" name="diet" value="vegetarian">
+                            <span>Vegetarian</span>
+                        </label>
+                    </div>
+                    <div class="impact">Impact: 1.5 kg CO₂/day</div>
+                </div>
+
+                <div class="calc-result">
+                    <h3>Your Daily Footprint</h3>
+                    <div class="total-impact">12.7 kg CO₂</div>
+                    <div class="comparison">vs. Global Average: 16.4 kg CO₂</div>
+                    <div class="status good">🎉 You're doing great!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leaderboard" class="leaderboard-section">
+        <div class="container">
+            <h2>Community Leaderboard</h2>
+            <div class="leaderboard">
+                <div class="leader-item rank-1">
+                    <div class="rank">🏆</div>
+                    <div class="user-info">
+                        <span class="username">EcoWarrior2025</span>
+                        <span class="score">2,450 points</span>
+                    </div>
+                    <div class="reduction">-45% CO₂</div>
+                </div>
+                <div class="leader-item rank-2">
+                    <div class="rank">🥈</div>
+                    <div class="user-info">
+                        <span class="username">GreenThumb99</span>
+                        <span class="score">2,120 points</span>
+                    </div>
+                    <div class="reduction">-38% CO₂</div>
+                </div>
+                <div class="leader-item rank-3">
+                    <div class="rank">🥉</div>
+                    <div class="user-info">
+                        <span class="username">PlanetSaver</span>
+                        <span class="score">1,980 points</span>
+                    </div>
+                    <div class="reduction">-35% CO₂</div>
+                </div>
+                <div class="leader-item">
+                    <div class="rank">4</div>
+                    <div class="user-info">
+                        <span class="username">ClimateHero</span>
+                        <span class="score">1,750 points</span>
+                    </div>
+                    <div class="reduction">-32% CO₂</div>
+                </div>
+                <div class="leader-item your-rank">
+                    <div class="rank">12</div>
+                    <div class="user-info">
+                        <span class="username">You</span>
+                        <span class="score">1,240 points</span>
+                    </div>
+                    <div class="reduction">-22% CO₂</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="tips-section">
+        <div class="container">
+            <h2>Daily Eco Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">💧</div>
+                    <h3>Water Conservation</h3>
+                    <p>Take shorter showers and fix leaky faucets to save up to 2,700 gallons per year.</p>
+                    <div class="tip-impact">Save: 50 kg CO₂/year</div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🚲</div>
+                    <h3>Bike to Work</h3>
+                    <p>Replace car trips with cycling 3 days a week to reduce your transport footprint.</p>
+                    <div class="tip-impact">Save: 1,200 kg CO₂/year</div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">♻️</div>
+                    <h3>Reduce, Reuse, Recycle</h3>
+                    <p>Proper recycling and reducing waste can significantly impact your carbon footprint.</p>
+                    <div class="tip-impact">Save: 800 kg CO₂/year</div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🌡️</div>
+                    <h3>Smart Thermostat</h3>
+                    <p>Adjust your thermostat by 2°C to reduce energy consumption without sacrificing comfort.</p>
+                    <div class="tip-impact">Save: 900 kg CO₂/year</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="badges" class="badges-section">
+        <div class="container">
+            <h2>Your Eco Badges</h2>
+            <div class="badges-grid">
+                <div class="badge earned">
+                    <div class="badge-icon">🌱</div>
+                    <div class="badge-name">First Steps</div>
+                    <div class="badge-desc">Started your eco journey</div>
+                </div>
+                <div class="badge earned">
+                    <div class="badge-icon">🚲</div>
+                    <div class="badge-name">Bike Rider</div>
+                    <div class="badge-desc">Cycled 100km this month</div>
+                </div>
+                <div class="badge earned">
+                    <div class="badge-icon">💧</div>
+                    <div class="badge-name">Water Saver</div>
+                    <div class="badge-desc">Reduced water usage by 20%</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-name">Eco Champion</div>
+                    <div class="badge-desc">Reach top 10 on leaderboard</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">🌍</div>
+                    <div class="badge-name">Planet Protector</div>
+                    <div class="badge-desc">Save 1 ton of CO₂</div>
+                </div>
+                <div class="badge locked">
+                    <div class="badge-icon">⚡</div>
+                    <div class="badge-name">Energy Master</div>
+                    <div class="badge-desc">Go solar or renewable</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EcoTracker. Making the world greener, one step at a time.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1054 @@
+/* ByteCraft Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Navigation */
+.navbar {
+    background: white;
+    box-shadow: 0 2px 20px rgba(231, 76, 60, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+}
+
+.logo {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e74c3c;
+}
+
+.back-btn {
+    padding: 8px 16px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #c0392b;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 48px;
+    opacity: 0.9;
+}
+
+.game-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.game-screen {
+    width: 300px;
+    height: 200px;
+    background: #2c3e50;
+    border-radius: 12px;
+    border: 4px solid #34495e;
+    position: relative;
+    overflow: hidden;
+}
+
+.pixel-art {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #3498db 25%, transparent 25%),
+                linear-gradient(-45deg, #3498db 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #3498db 75%),
+                linear-gradient(-45deg, transparent 75%, #3498db 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.1;
+}
+
+.sprite {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 2s ease-in-out infinite;
+}
+
+.sprite.player {
+    top: 60%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.sprite.enemy {
+    top: 30%;
+    right: 20%;
+    animation-delay: 0.5s;
+}
+
+.sprite.coin {
+    top: 20%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.sprite.power {
+    top: 70%;
+    right: 40%;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.game-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.control-row {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Builder Section */
+.builder-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.builder-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e74c3c;
+}
+
+.builder-interface {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    gap: 24px;
+    height: 600px;
+}
+
+.builder-sidebar {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.tool-section {
+    margin-bottom: 32px;
+}
+
+.tool-section h3 {
+    margin-bottom: 16px;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.sprite-palette {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.sprite-item {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: grab;
+    transition: all 0.3s ease;
+}
+
+.sprite-item:hover {
+    border-color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.sprite-item:active {
+    cursor: grabbing;
+}
+
+.action-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.action-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.action-block:hover {
+    border-color: #e74c3c;
+    transform: translateX(4px);
+}
+
+.block-icon {
+    font-size: 1.2rem;
+}
+
+.sound-library {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sound-btn {
+    padding: 8px 12px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.sound-btn:hover {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.builder-canvas {
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    overflow: hidden;
+}
+
+.canvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: white;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.canvas-header h3 {
+    color: #2c3e50;
+}
+
+.canvas-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.canvas-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.clear-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.clear-btn:hover {
+    background: #7f8c8d;
+}
+
+.play-btn {
+    background: #27ae60;
+    color: white;
+}
+
+.play-btn:hover {
+    background: #229954;
+}
+
+.save-btn {
+    background: #3498db;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #2980b9;
+}
+
+.game-canvas {
+    height: 500px;
+    position: relative;
+    background: linear-gradient(45deg, #ecf0f1 25%, transparent 25%),
+                linear-gradient(-45deg, #ecf0f1 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #ecf0f1 75%),
+                linear-gradient(-45deg, transparent 75%, #ecf0f1 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.drop-zone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #95a5a6;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.builder-code {
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    overflow: hidden;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: white;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.code-header h3 {
+    color: #2c3e50;
+}
+
+.code-toggle {
+    padding: 6px 12px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.code-toggle:hover {
+    background: #c0392b;
+}
+
+.code-blocks {
+    padding: 24px;
+    min-height: 400px;
+}
+
+.code-block {
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.start-block {
+    border-color: #27ae60;
+    background: #d5f4e6;
+}
+
+.block-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.code-preview {
+    padding: 24px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Sprites Section */
+.sprites-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.sprites-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e74c3c;
+}
+
+.sprite-categories {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    padding: 12px 24px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.category-btn:hover,
+.category-btn.active {
+    background: #e74c3c;
+    color: white;
+    border-color: #e74c3c;
+}
+
+.sprites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.sprite-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.sprite-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sprite-display {
+    font-size: 4rem;
+    margin-bottom: 16px;
+    background: #f8f9fa;
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.sprite-info h4 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.sprite-info p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.sprite-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.use-sprite-btn {
+    padding: 8px 16px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.use-sprite-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Tutorials Section */
+.tutorials-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.tutorials-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e74c3c;
+}
+
+.tutorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.tutorial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    border-top: 4px solid #e74c3c;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.tutorial-card.beginner {
+    border-top-color: #27ae60;
+}
+
+.tutorial-card.intermediate {
+    border-top-color: #f39c12;
+}
+
+.tutorial-card.advanced {
+    border-top-color: #e74c3c;
+}
+
+.tutorial-card.expert {
+    border-top-color: #9b59b6;
+}
+
+.tutorial-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    padding: 6px 12px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tutorial-card.beginner .tutorial-badge {
+    background: #27ae60;
+}
+
+.tutorial-card.intermediate .tutorial-badge {
+    background: #f39c12;
+}
+
+.tutorial-card.advanced .tutorial-badge {
+    background: #e74c3c;
+}
+
+.tutorial-card.expert .tutorial-badge {
+    background: #9b59b6;
+}
+
+.tutorial-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.tutorial-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.tutorial-card p {
+    color: #666;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.tutorial-stats {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tutorial-steps {
+    margin-bottom: 24px;
+}
+
+.step {
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    border-left: 3px solid #e74c3c;
+}
+
+.start-tutorial-btn {
+    width: 100%;
+    padding: 12px 24px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-tutorial-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.concepts-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 32px;
+    color: #2c3e50;
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+
+.concept-card {
+    background: #f8f9fa;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+}
+
+.concept-card:hover {
+    border-color: #e74c3c;
+    transform: translateY(-4px);
+}
+
+.concept-icon {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.concept-card h4 {
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.concept-card p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Showcase Section */
+.showcase-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.showcase-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+    color: #e74c3c;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.game-showcase {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.game-showcase:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.game-thumbnail {
+    position: relative;
+    height: 200px;
+    background: #2c3e50;
+    overflow: hidden;
+}
+
+.game-preview-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #34495e 25%, transparent 25%),
+                linear-gradient(-45deg, #34495e 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #34495e 75%),
+                linear-gradient(-45deg, transparent 75%, #34495e 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.3;
+}
+
+.preview-sprite {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.preview-sprite:nth-child(1) {
+    top: 60%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.preview-sprite:nth-child(2) {
+    top: 30%;
+    right: 30%;
+    animation-delay: 1s;
+}
+
+.preview-sprite:nth-child(3) {
+    top: 20%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.game-thumbnail:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-btn {
+    padding: 12px 24px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+    background: #c0392b;
+    transform: scale(1.1);
+}
+
+.game-info {
+    padding: 24px;
+}
+
+.game-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+    color: #2c3e50;
+}
+
+.game-creator {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.game-description {
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.game-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 4px 8px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.achievement-board {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.achievement-board h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 32px;
+    color: #2c3e50;
+}
+
+.creators-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.creator-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.creator-item:hover {
+    background: #e9ecef;
+    transform: translateX(8px);
+}
+
+.creator-rank {
+    font-size: 1.5rem;
+    margin-right: 16px;
+    min-width: 40px;
+}
+
+.creator-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.creator-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.creator-games {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.creator-score {
+    font-weight: 700;
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 32px 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .game-preview {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .game-screen {
+        width: 250px;
+        height: 150px;
+    }
+    
+    .builder-interface {
+        grid-template-columns: 1fr;
+        height: auto;
+        gap: 16px;
+    }
+    
+    .builder-sidebar {
+        order: 2;
+    }
+    
+    .builder-canvas {
+        order: 1;
+    }
+    
+    .builder-code {
+        order: 3;
+    }
+    
+    .sprite-categories {
+        gap: 8px;
+    }
+    
+    .category-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .sprites-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tutorial-stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .concepts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .game-stats {
+        flex-direction: column;
+        gap: 4px;
+    }
+}

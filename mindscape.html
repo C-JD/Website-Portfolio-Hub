@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindScape - Mental Health & Mindfulness</title>
+    <link rel="stylesheet" href="mindscape-styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🧘</span>
+                <span class="brand-text">MindScape</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#breathing">Breathing</a></li>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+            <a href="index.html" class="back-btn">← Back to Hub</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to Your Safe Space</h1>
+            <p>Explore mindfulness, track your mental wellness, and find your inner peace</p>
+            <div class="breathing-circle">
+                <div class="circle"></div>
+                <div class="breathe-text">Breathe</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="journal" class="journal-section">
+        <div class="container">
+            <h2>Daily Journal</h2>
+            <div class="journal-container">
+                <div class="journal-prompts">
+                    <h3>Today's Prompts</h3>
+                    <div class="prompt-cards">
+                        <div class="prompt-card active">
+                            <div class="prompt-icon">💭</div>
+                            <p>What are three things you're grateful for today?</p>
+                        </div>
+                        <div class="prompt-card">
+                            <div class="prompt-icon">🌟</div>
+                            <p>Describe a moment that made you smile today.</p>
+                        </div>
+                        <div class="prompt-card">
+                            <div class="prompt-icon">🎯</div>
+                            <p>What's one small goal you achieved today?</p>
+                        </div>
+                        <div class="prompt-card">
+                            <div class="prompt-icon">🌱</div>
+                            <p>How did you take care of yourself today?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="journal-editor">
+                    <div class="editor-header">
+                        <span class="date">Today, March 15, 2025</span>
+                        <div class="mood-selector">
+                            <span class="mood-label">How are you feeling?</span>
+                            <div class="mood-options">
+                                <span class="mood-emoji" data-mood="happy">😊</span>
+                                <span class="mood-emoji" data-mood="calm">😌</span>
+                                <span class="mood-emoji selected" data-mood="neutral">😐</span>
+                                <span class="mood-emoji" data-mood="sad">😔</span>
+                                <span class="mood-emoji" data-mood="stressed">😰</span>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea class="journal-textarea" placeholder="Write your thoughts here... What are three things you're grateful for today?"></textarea>
+                    <div class="editor-actions">
+                        <button class="save-btn">Save Entry</button>
+                        <span class="word-count">0 words</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="breathing" class="breathing-section">
+        <div class="container">
+            <h2>Guided Breathing</h2>
+            <div class="breathing-exercise">
+                <div class="breathing-visual">
+                    <div class="breathing-animation">
+                        <div class="breath-circle"></div>
+                        <div class="breath-text">Inhale</div>
+                    </div>
+                </div>
+                <div class="breathing-controls">
+                    <h3>4-7-8 Breathing Technique</h3>
+                    <p>Inhale for 4 seconds, hold for 7 seconds, exhale for 8 seconds</p>
+                    <div class="control-buttons">
+                        <button class="breathing-btn start-btn">Start Session</button>
+                        <button class="breathing-btn pause-btn">Pause</button>
+                        <button class="breathing-btn reset-btn">Reset</button>
+                    </div>
+                    <div class="session-info">
+                        <div class="cycle-counter">
+                            <span class="counter-label">Cycles Completed:</span>
+                            <span class="cycle-count">0</span>
+                        </div>
+                        <div class="timer">
+                            <span class="timer-label">Session Time:</span>
+                            <span class="time-display">00:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="breathing-benefits">
+                <h3>Benefits of Breathing Exercises</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">😌</div>
+                        <span>Reduces Stress</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💤</div>
+                        <span>Improves Sleep</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <span>Enhances Focus</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">❤️</div>
+                        <span>Calms Mind</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quotes" class="quotes-section">
+        <div class="container">
+            <h2>Daily Inspiration</h2>
+            <div class="quote-display">
+                <div class="quote-card">
+                    <div class="quote-text">
+                        "The present moment is the only time over which we have dominion."
+                    </div>
+                    <div class="quote-author">— Thích Nhất Hạnh</div>
+                    <button class="new-quote-btn">New Quote</button>
+                </div>
+            </div>
+            <div class="quotes-collection">
+                <h3>Mindfulness Collection</h3>
+                <div class="quotes-grid">
+                    <div class="mini-quote">
+                        <p>"Wherever you are, be there totally."</p>
+                        <span>— Eckhart Tolle</span>
+                    </div>
+                    <div class="mini-quote">
+                        <p>"Peace comes from within. Do not seek it without."</p>
+                        <span>— Buddha</span>
+                    </div>
+                    <div class="mini-quote">
+                        <p>"The mind is everything. What you think you become."</p>
+                        <span>— Buddha</span>
+                    </div>
+                    <div class="mini-quote">
+                        <p>"Be yourself and be where you are."</p>
+                        <span>— Thích Nhất Hạnh</span>
+                    </div>
+                    <div class="mini-quote">
+                        <p>"The only way out is through."</p>
+                        <span>— Robert Frost</span>
+                    </div>
+                    <div class="mini-quote">
+                        <p>"Every moment is a fresh beginning."</p>
+                        <span>— T.S. Eliot</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources-section">
+        <div class="container">
+            <h2>Mental Health Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-category">
+                    <h3>🚨 Crisis Support</h3>
+                    <div class="resource-list">
+                        <div class="resource-item urgent">
+                            <h4>National Suicide Prevention Lifeline</h4>
+                            <p>24/7 crisis support</p>
+                            <span class="contact">988</span>
+                        </div>
+                        <div class="resource-item urgent">
+                            <h4>Crisis Text Line</h4>
+                            <p>Text-based crisis support</p>
+                            <span class="contact">Text HOME to 741741</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>📚 Educational Resources</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4>Mental Health America</h4>
+                            <p>Mental health information & screening tools</p>
+                            <span class="link">mhanational.org</span>
+                        </div>
+                        <div class="resource-item">
+                            <h4>NAMI</h4>
+                            <p>National Alliance on Mental Illness</p>
+                            <span class="link">nami.org</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>🧘 Mindfulness Apps</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4>Headspace</h4>
+                            <p>Guided meditation & mindfulness</p>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="resource-item">
+                            <h4>Calm</h4>
+                            <p>Sleep stories & relaxation</p>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <div class="resource-item">
+                            <h4>Insight Timer</h4>
+                            <p>Free meditation community</p>
+                            <div class="rating">⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resource-category">
+                    <h3>👥 Support Communities</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4>7 Cups</h4>
+                            <p>Free emotional support</p>
+                            <span class="link">7cups.com</span>
+                        </div>
+                        <div class="resource-item">
+                            <h4>Support Groups Central</h4>
+                            <p>Find local support groups</p>
+                            <span class="link">supportgroupscentral.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="emergency-note">
+                <h3>⚠️ Emergency Notice</h3>
+                <p>If you're experiencing a mental health emergency, please contact emergency services (911) or go to your nearest emergency room immediately.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MindScape. Your mental wellness journey matters.</p>
+            <p class="disclaimer">This platform provides educational resources and is not a substitute for professional mental health care.</p>
+        </div>
+    </footer>
+</body>
+</html>
